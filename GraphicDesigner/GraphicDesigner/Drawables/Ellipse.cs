@@ -38,7 +38,7 @@ namespace GraphicDesigner.Drawables
         {
             points = new List<PointF>();
 
-            for (double i = 0; i < 360; i += 2)
+            for (double i = 0; i < 360; i += 0.3)
             {
                 double angle = i * System.Math.PI / 180;
                 int x = (int)(cx + radius * System.Math.Cos(angle));
