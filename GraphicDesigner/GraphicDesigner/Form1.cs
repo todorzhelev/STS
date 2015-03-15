@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 using System.Windows.Input;
 using System.Diagnostics;
 
@@ -61,7 +60,7 @@ namespace GraphicDesigner
                 t.Start();
                 foreach (Point p in coords)
                 {
-                    graphics.FillRectangle(blueBrush, p.x, p.y, 2, 2);
+                    graphics.FillRectangle(blueBrush, p.X, p.Y, 2, 2);
                     //Bitmap bm = new Bitmap(1, 1);
                     //bm.SetPixel(0, 0, Color.Red);
                     //graphics.DrawImageUnscaled(bm, p.x, p.y);
@@ -92,7 +91,6 @@ namespace GraphicDesigner
             //Rectangle rectangle = new Rectangle(x, y, 1, 1);
             //graphics.DrawRectangle(Pens.Black, rectangle);
            Point pt = new Point(3,4);
-           pt.mouseUp(sender, e);
         }
 
         private Graphics graphics;
