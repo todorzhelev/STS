@@ -11,11 +11,7 @@ namespace GraphicDesigner.Drawables
     {
         public Ellipse()
         {
-        }
-
-        public Ellipse(int radius)
-        {
-            this.radius = radius;
+            points = new List<PointF>();
         }
 
         public void mouseDown(Point mouseCoords)
@@ -36,8 +32,6 @@ namespace GraphicDesigner.Drawables
 
         private void GeneratePoints()
         {
-            points = new List<PointF>();
-
             for (double i = 0; i < 360; i += 0.3)
             {
                 double angle = i * System.Math.PI / 180;
@@ -52,11 +46,6 @@ namespace GraphicDesigner.Drawables
             return points;
         }
 
-        private IList<PointF> points;
-        private int cx,cy;
-        private int radius;
-
-
         public FigureType FigureType
         {
             get
@@ -68,5 +57,9 @@ namespace GraphicDesigner.Drawables
                 throw new NotImplementedException();
             }
         }
+
+        private IList<PointF> points;
+        private int cx, cy;
+        private int radius;
     }
 }

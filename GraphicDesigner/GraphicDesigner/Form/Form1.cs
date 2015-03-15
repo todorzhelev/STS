@@ -22,7 +22,7 @@ namespace GraphicDesigner
             this.MouseUp += mouseUp;
             renderer = new Renderer();
             renderer.SetGraphics(ref graphics);
-            currentFigure = new Drawables.Ellipse();
+            currentFigure = new Drawables.Line();
         }
 
         private void button1_Click(object sender, EventArgs e)
