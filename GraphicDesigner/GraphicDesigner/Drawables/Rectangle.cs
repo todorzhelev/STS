@@ -9,7 +9,7 @@ namespace GraphicDesigner.Drawables
 {
     class Rectangle : IDrawable
     {
-        public IList<System.Drawing.PointF> GetPoints()
+        public IList<Point> GetPoints()
         {
             throw new NotImplementedException();
         }

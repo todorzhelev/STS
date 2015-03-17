@@ -13,11 +13,11 @@ namespace GraphicDesigner
         {
         }
 
-        public void Render(IList<PointF> points)
+        public void Render(IList<Point> points)
         {
             SolidBrush blueBrush = new SolidBrush(Color.Blue);
 
-            foreach (PointF p in points)
+            foreach (Point p in points)
             {
                 graphics.FillRectangle(blueBrush, p.X, p.Y, 1, 1);
 

@@ -9,7 +9,7 @@ namespace GraphicDesigner
 {
     interface IDrawable
     {
-        IList<PointF> GetPoints();
+        IList<Point> GetPoints();
         void mouseDown(Point mouseCoords);
         void mouseUp(Point mouseCoords);
 

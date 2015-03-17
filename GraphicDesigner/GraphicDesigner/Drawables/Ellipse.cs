@@ -11,7 +11,7 @@ namespace GraphicDesigner.Drawables
     {
         public Ellipse()
         {
-            points = new List<PointF>();
+            points = new List<Point>();
         }
 
         public void mouseDown(Point mouseCoords)
@@ -41,7 +41,7 @@ namespace GraphicDesigner.Drawables
                 points.Add(p);
             }
         }
-        public IList<PointF> GetPoints()
+        public IList<Point> GetPoints()
         {
             return points;
         }
@@ -58,7 +58,7 @@ namespace GraphicDesigner.Drawables
             }
         }
 
-        private IList<PointF> points;
+        private IList<Point> points;
         private int cx, cy;
         private int radius;
     }

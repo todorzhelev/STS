@@ -42,7 +42,7 @@ namespace GraphicDesigner
         {
             this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
 
-            IList<PointF> coords = this.options.CurrentFigure.GetPoints();
+            IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
             renderer.Render(coords);
         }

@@ -11,10 +11,10 @@ namespace GraphicDesigner.Drawables
     {
         public Line()
         {
-            points = new List<PointF>();
+            points = new List<Point>();
         }
 
-        public IList<System.Drawing.PointF> GetPoints()
+        public IList<Point> GetPoints()
         {
             return points;
         }
@@ -89,7 +89,7 @@ namespace GraphicDesigner.Drawables
             }
         }
 
-        private IList<PointF> points;
+        private IList<Point> points;
         private int sx, sy;
     }
 }
