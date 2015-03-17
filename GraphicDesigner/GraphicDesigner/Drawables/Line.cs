@@ -30,22 +30,49 @@ namespace GraphicDesigner.Drawables
             Point p1 = new Point(sx, sy);
             Point p2 = new Point(mouseCoords.X, mouseCoords.Y);
 
-            double deltaX = p2.X - p1.X;
-            double deltaY = p2.Y - p1.Y;
-            double error = 0;
-            double deltaError = Math.Abs(deltaY / deltaX);
+            int x1 = p1.X;
+            int x2 = p2.X;
+            int y1 = p1.Y;
+            int y2 = p2.Y;
 
-            int y = p1.Y;
-            for( int x = p1.X; x <= p2.X; x++ )
+            bool steep = (Math.Abs(y2 - y1) > Math.Abs(x2 - x1));
+            if(steep)
             {
-                points.Add(new Point(x,y));
-                error += deltaError;
+                Utilities.Misc.Swap(ref x1, ref y1);
+                Utilities.Misc.Swap(ref x2, ref y2);
+            }
 
-                while( error >= 0.5 )
+            if(x1 > x2)
+            {
+                Utilities.Misc.Swap(ref x1, ref x2);
+                Utilities.Misc.Swap(ref y1, ref y2);
+            }
+
+            float dx = x2 - x1;   
+            float dy = Math.Abs(y2 - y1);
+
+            float error = dx / 2.0f;
+            int ystep = (y1 < y2) ? 1 : -1;
+            int y = (int)y1;
+
+            int maxX = (int)x2;
+
+            for (int x = (int)x1; x < maxX; x++)
+            {
+                if (steep)
+                {
+                    points.Add(new Point(y, x));
+                }
+                else
                 {
                     points.Add(new Point(x, y));
-                    y += Math.Sign(p2.Y - p1.Y);
-                    error -= 1;
+                }
+
+                error -= dy;
+                if (error < 0)
+                {
+                    y += ystep;
+                    error += dx;
                 }
             }
         }
