@@ -14,6 +14,14 @@ namespace GraphicDesigner
 {
     public partial class STS : Form
     {
+        private const int DefaultBrushSize = 1;
+        private static readonly Color DefaultColor = Color.Blue;
+        private const FigureType DefaultFigureType = FigureType.Line;
+
+        private Graphics graphics;
+        private Renderer renderer;
+        private InputOptions options;
+
         public STS()
         {
             InitializeComponent();
@@ -22,27 +30,24 @@ namespace GraphicDesigner
             this.MouseUp += mouseUp;
             renderer = new Renderer();
             renderer.SetGraphics(ref graphics);
-            currentFigure = new Drawables.Line();
+            this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
         }
 
         private void mouseDown(object sender, MouseEventArgs e)
         {
-            currentFigure.mouseDown(new Point(e.X, e.Y));
+            this.options.CurrentFigure.mouseDown(new Point(e.X, e.Y));
         }
 
         private void mouseUp(object sender, MouseEventArgs e)
         {
-            currentFigure.mouseUp(new Point(e.X, e.Y));
+            this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
 
-            IList<PointF> coords = currentFigure.GetPoints();
+            IList<PointF> coords = this.options.CurrentFigure.GetPoints();
 
             renderer.Render(coords);
         }
 
-        private Graphics graphics;
-        private Renderer renderer;
 
-        IDrawable currentFigure;
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -75,8 +80,8 @@ namespace GraphicDesigner
         private void ColorButton_Click(object sender, EventArgs e)
         {
             colorDialog1.ShowDialog();
-            ColorButton.BackColor = colorDialog1.Color;
-           // this.commandBarButton1.Image = Image.FromFile("b5aeff9e250.jpg").GetThumbnailImage(100, 100, null, IntPtr.Zero);
+            this.options.Color = colorDialog1.Color;
+           
         }
 
         private void STS_Load(object sender, EventArgs e)
@@ -86,29 +91,22 @@ namespace GraphicDesigner
 
         private void Curve_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            Curve.BackColor = colorDialog1.Color;
+            this.options.FigureType = FigureType.Curve;
         }
 
         private void Point_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            Point.BackColor = colorDialog1.Color;
+            throw new NotImplementedException();
         }
 
         private void Circle_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            Circle.BackColor = colorDialog1.Color;
+            this.options.FigureType = FigureType.Ellipse;
         }
 
         private void Line_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            Line.BackColor = colorDialog1.Color;
+            this.options.FigureType = FigureType.Line;
         }
-
-      
-       
     }
 }
