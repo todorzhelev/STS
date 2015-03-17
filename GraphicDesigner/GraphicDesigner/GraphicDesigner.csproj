@@ -47,6 +47,11 @@
   <ItemGroup>
     <Compile Include="Drawables\Curve.cs" />
     <Compile Include="Drawables\Ellipse.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\FigureType.cs" />
     <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
@@ -66,14 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,28 +88,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b5aeff9e250.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TrueType_1_Line.PNG" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\list.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\curve.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Untitled11.png" />
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
