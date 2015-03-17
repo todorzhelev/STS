@@ -13,13 +13,13 @@ namespace GraphicDesigner
         {
         }
 
-        public void Render(IList<Point> points)
+        public void Render(IList<Point> points, InputOptions options)
         {
-            SolidBrush blueBrush = new SolidBrush(Color.Blue);
+            SolidBrush brush = new SolidBrush(options.Color);
 
             foreach (Point p in points)
             {
-                graphics.FillRectangle(blueBrush, p.X, p.Y, 1, 1);
+                graphics.FillRectangle(brush, p.X, p.Y, (int)options.BrushSize, (int)options.BrushSize);
 
                 //another way to draw points, which is slower
                 //Bitmap bm = new Bitmap(1, 1);

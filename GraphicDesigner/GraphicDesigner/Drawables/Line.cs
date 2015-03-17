@@ -21,6 +21,8 @@ namespace GraphicDesigner.Drawables
 
         public void mouseDown(Point mouseCoords)
         {
+            points = new List<Point>();
+
             sx = mouseCoords.X;
             sy = mouseCoords.Y;
         }

@@ -10,7 +10,7 @@ namespace GraphicDesigner
     class InputOptions
     {
         private FigureType figureType;
-        public InputOptions(Color color, FigureType figureType, int brushSize)
+        public InputOptions(Color color, FigureType figureType, Utilities.BrushSize brushSize)
         {
             this.Color = color;
             this.FigureType = figureType;
@@ -21,7 +21,7 @@ namespace GraphicDesigner
 
         public IDrawable CurrentFigure { get; private set; }
 
-        public int BrushSize { get; set; }
+        public Utilities.BrushSize BrushSize { get; set; }
 
         public FigureType FigureType
         {

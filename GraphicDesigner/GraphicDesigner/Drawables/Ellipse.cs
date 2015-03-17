@@ -32,6 +32,8 @@ namespace GraphicDesigner.Drawables
 
         private void GeneratePoints()
         {
+            points = new List<Point>();
+
             for (double i = 0; i < 360; i += 0.3)
             {
                 double angle = i * System.Math.PI / 180;
@@ -41,22 +43,13 @@ namespace GraphicDesigner.Drawables
                 points.Add(p);
             }
         }
+
         public IList<Point> GetPoints()
         {
             return points;
         }
 
-        public FigureType FigureType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public FigureType FigureType { get; set; }
 
         private IList<Point> points;
         private int cx, cy;

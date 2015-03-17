@@ -14,7 +14,7 @@ namespace GraphicDesigner
 {
     public partial class STS : Form
     {
-        private const int DefaultBrushSize = 1;
+        private const Utilities.BrushSize DefaultBrushSize = Utilities.BrushSize.Small;
         private static readonly Color DefaultColor = Color.Blue;
         private const FigureType DefaultFigureType = FigureType.Line;
 
@@ -25,11 +25,11 @@ namespace GraphicDesigner
         public STS()
         {
             InitializeComponent();
-            graphics = this.CreateGraphics();
-            this.MouseDown += mouseDown;
-            this.MouseUp += mouseUp;
-            renderer = new Renderer();
-            renderer.SetGraphics(ref graphics);
+            this.graphics = this.CreateGraphics();
+            this.MouseDown += this.mouseDown;
+            this.MouseUp += this.mouseUp;
+            this.renderer = new Renderer();
+            this.renderer.SetGraphics(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
         }
 
@@ -44,7 +44,7 @@ namespace GraphicDesigner
 
             IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
-            renderer.Render(coords);
+            renderer.Render(coords, this.options);
         }
 
 
