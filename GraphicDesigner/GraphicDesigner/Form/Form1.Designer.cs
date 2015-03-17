@@ -60,27 +60,27 @@
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
@@ -91,25 +91,24 @@
             // 
             // ColorButton
             // 
+            this.ColorButton.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.ColorButton, "ColorButton");
             this.ColorButton.ForeColor = System.Drawing.Color.Black;
             this.ColorButton.Name = "ColorButton";
-            this.ColorButton.UseVisualStyleBackColor = true;
+            this.ColorButton.UseVisualStyleBackColor = false;
             this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             // 
             // Line
             // 
-            this.Line.Cursor = System.Windows.Forms.Cursors.PanNW;
             resources.ApplyResources(this.Line, "Line");
+            this.Line.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Line.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Line.Image = global::GraphicDesigner.Properties.Resources.TrueType_1_Line;
             this.Line.Name = "Line";
             this.Line.UseVisualStyleBackColor = true;
             this.Line.Click += new System.EventHandler(this.Line_Click);
             // 
             // Circle
             // 
-            this.Circle.BackgroundImage = global::GraphicDesigner.Properties.Resources.Untitled1;
             resources.ApplyResources(this.Circle, "Circle");
             this.Circle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Circle.Name = "Circle";
@@ -118,17 +117,15 @@
             // 
             // Point
             // 
-            this.Point.BackColor = System.Drawing.Color.Aqua;
+            this.Point.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.Point, "Point");
             this.Point.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Point.Image = global::GraphicDesigner.Properties.Resources.list;
             this.Point.Name = "Point";
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
             // 
             // Curve
             // 
-            this.Curve.BackgroundImage = global::GraphicDesigner.Properties.Resources.Untitled11;
             resources.ApplyResources(this.Curve, "Curve");
             this.Curve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Curve.Name = "Curve";

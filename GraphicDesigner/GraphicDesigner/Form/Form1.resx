@@ -120,44 +120,7 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="openToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+O</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 28</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+S</value>
-  </data>
-  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 28</value>
-  </data>
-  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="exitToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F4</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 28</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Showcard Gothic, 14.25pt</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 27</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -183,6 +146,43 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 14.25pt</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="openToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 28</value>
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 28</value>
+  </data>
+  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="exitToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F4</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 28</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
@@ -193,16 +193,16 @@
     <value>408, 17</value>
   </metadata>
   <data name="ColorButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+    <value>Showcard Gothic, 12pt</value>
   </data>
   <data name="ColorButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="ColorButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>526, 0</value>
+    <value>472, 1</value>
   </data>
   <data name="ColorButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 31</value>
+    <value>174, 31</value>
   </data>
   <data name="ColorButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -222,23 +222,34 @@
   <data name="&gt;&gt;ColorButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="Line.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
   <data name="Line.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt</value>
+  </data>
+  <data name="Line.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
+        RdGOr6tpWbS8YVjNySLE2FYTsqgwtt3oLCqM7c3QLCqMzcZlUWFsHwZlUWFsJSOyqDC2A+lZVBjbsdws
+        Koztq8QsKoztTFYWFcZWISWLCmOrE59FhbFVC86iwthaRGZRYWyNwrKoMLZ2MVlUGNslAVlUGNtV3f9f
+        wtah76cuYetz/RUqjK3bxYeoMLYIV96iwtiCND9HhbHFaXuRCmML1fAoFcYWrfZdKowtQdXTVBhbjvPX
+        qTC2NCcHqDC2TN9uUGFsyQ7PUGFs+cqXqDC2IQrHqDC2Uf7fo8LYBtJJKoxtrNdVKoxtOA5TYds0xWHW
+        9n2Wctb2caJXAUU3aHq6RcSnX1aLX1a9ZfkD2mPBnnqxDXEAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="Line.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Line.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 162</value>
+    <value>788, 0</value>
   </data>
   <data name="Line.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 56</value>
+    <value>55, 54</value>
   </data>
   <data name="Line.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="Line.Text" xml:space="preserve">
-    <value>Line</value>
   </data>
   <data name="Line.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -261,20 +272,28 @@
   <data name="Circle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt, style=Italic</value>
   </data>
+  <data name="Circle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAARJJREFUWEft0EGygyAQRdHsf9OmtO+roEICUXkMOJOu30S49V/LkGZWiyGyXsLf
+        I2RRJCxjGJEjLGMYkSMsYxiRIyxjGJEjLGMYkSMsYxiRIyxjGJEjLGMYkSMsYxiRIyxjuNCSYB/DhRZh
+        O7MyaElwMFQW240ti5YEBxtPFiEJDqR3FhUnHEu/LN7P4ReJx7N4uYzf7d2fxWt1+ObkahbXt+P7grYs
+        rryM68qqsrjsMq6r8OufeQfualH8hiv/whUX5K/g+gp8cLfMvTxYwI8ednyGx0847mX3Hgl7nPX1eZWK
+        Pc66+5bFgQNvE5KIvUs+K5ZGM6vFWkCLxIHXzGoxs1oMnLUOiT/tRuk4mFn1luUNGbsXSQH69sAAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
   <data name="Circle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Circle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 96</value>
+    <value>846, 0</value>
   </data>
   <data name="Circle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 60</value>
+    <value>58, 54</value>
   </data>
   <data name="Circle.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="Circle.Text" xml:space="preserve">
-    <value>Circle</value>
   </data>
   <data name="Circle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -294,20 +313,36 @@
   <data name="Point.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt, style=Italic</value>
   </data>
+  <data name="Point.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8k
+        KDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3
+        Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAiACIDASIAAhEBAxEB/8QA
+        HwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIh
+        MUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVW
+        V1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXG
+        x8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQF
+        BgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAV
+        YnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
+        hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq
+        8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3GkJxSmvn74ufEnVv7duNE0O9ls7azby5poGKSSyD73zDkAHj
+        A7gnnjAB9AZFLXyt4T+JviPQtTjnutRu9RtNw863upmk3L32lslT6Y/HIr6js7iK7tYri3cSQyoHRx0Z
+        SMg/iKAJqKKKACvmL4yeEr/RvFN5qfku+nX8pmScDKq7csjHsc5x6jHvj6dprRoylWUFSMEEcEUAfHHh
+        nw9qPiXVYtP0uBpJGI3vj5YlzyzHsB/9YcmvsDTbOPT9PtrKHPlW8SRIWPOFAAz+AqS3t4LaIR20McUY
+        OdsahRn6CpaACiiigAooooAQUtFFABRRRQB//9k=
+</value>
+  </data>
   <data name="Point.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Point.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 33</value>
+    <value>670, 1</value>
   </data>
   <data name="Point.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 57</value>
+    <value>52, 53</value>
   </data>
   <data name="Point.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="Point.Text" xml:space="preserve">
-    <value>Point</value>
   </data>
   <data name="Point.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -324,23 +359,35 @@
   <data name="&gt;&gt;Point.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Curve.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
   <data name="Curve.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt, style=Italic</value>
+  </data>
+  <data name="Curve.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAXRJREFUWEftz+GugyAMBtD7/i+9a/SQlQEKKsmWeP7Zr7T17/WVnrNGnD/rb5em
+        s4bfW9vNs0EDz+w5xYhuXQ/Mvsy4DsetRt7E0CMHfYY1aCqIGzTt2msypiDu4EGNjoaxP5YN8jgna6jH
+        nuZkpxiRk9VUMo9ysgsMyskKn4H2nOwy43Ky3PFZgpsYGghyWVVjILiV0YEg2DtLdQILEtXgXdISCCaw
+        IBAkzbNUp7EmUU2++yxhsNXnsSYQrOpnbcXZLEtUV89ZBcsS1dVzVsGyRHX1nFWwLFFd/dRZi60+jzWB
+        YPX+ECaq01iTqCa/dtZCMIEFgSDJvrUkqhNYkKgGe2ctBLcyOhAEnyWNgeAmhgaC3PFZC9kdTAwEuUpV
+        e052jVmBoNA4tkZ2ihE5WU373hrZII8L4pqxszY6OnhQo6PhKN6lqSBu09fW0XErQ4909Rl5mXEdRlov
+        MKLb+INBng06+WxhbYOms66+n+Q5q9/r9Q93jAI0ALX+qQAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="Curve.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Curve.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 224</value>
+    <value>728, 1</value>
   </data>
   <data name="Curve.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 56</value>
+    <value>54, 53</value>
   </data>
   <data name="Curve.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="Curve.Text" xml:space="preserve">
-    <value>Curve</value>
   </data>
   <data name="Curve.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -371,9 +418,6 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Graphic Editor - STS</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
