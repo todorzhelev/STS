@@ -32,49 +32,65 @@ namespace GraphicDesigner.Drawables
             Point p1 = new Point(sx, sy);
             Point p2 = new Point(mouseCoords.X, mouseCoords.Y);
 
+            //Point p1 = new Point(1, 1);
+            //Point p2 = new Point(4, 3);
+
             int x1 = p1.X;
             int x2 = p2.X;
             int y1 = p1.Y;
             int y2 = p2.Y;
 
-            bool steep = (Math.Abs(y2 - y1) > Math.Abs(x2 - x1));
-            if(steep)
+            int deltaX = x2 - x1;
+            int deltaY = y2 - y1;
+            float slope = (float)deltaY / deltaX;
+
+            int yIncr = slope >= 0 ? 1 : -1;
+
+            float offset = 0;
+            float threshold = 0.5f;
+
+            if( slope >= -1 && slope <= 1)
             {
-                Utilities.Misc.Swap(ref x1, ref y1);
-                Utilities.Misc.Swap(ref x2, ref y2);
-            }
-
-            if(x1 > x2)
-            {
-                Utilities.Misc.Swap(ref x1, ref x2);
-                Utilities.Misc.Swap(ref y1, ref y2);
-            }
-
-            float dx = x2 - x1;   
-            float dy = Math.Abs(y2 - y1);
-
-            float error = dx / 2.0f;
-            int ystep = (y1 < y2) ? 1 : -1;
-            int y = (int)y1;
-
-            int maxX = (int)x2;
-
-            for (int x = (int)x1; x < maxX; x++)
-            {
-                if (steep)
+                float delta = Math.Abs(slope);
+                int y = y1;
+                if( x2 < x1 )
                 {
-                    points.Add(new Point(y, x));
+                    Utilities.Misc.Swap(ref x1, ref x2);
+                    y = y2;
                 }
-                else
+
+                for( int x = x1; x <= x2; x++)
                 {
+                    if (offset >= threshold)
+                    {
+                        y += yIncr;
+                        threshold += 1;
+                    }
+
                     points.Add(new Point(x, y));
+                    offset += delta;
+                }
+            }
+            else
+            {
+                float delta = Math.Abs((float)deltaX / deltaY);
+                int x = x1;
+                if( y2 < y1 ) 
+                {
+                    Utilities.Misc.Swap(ref y1, ref y2);
+                    x = x2;
                 }
 
-                error -= dy;
-                if (error < 0)
+                for( int y = y1; y <= y2; y++)
                 {
-                    y += ystep;
-                    error += dx;
+                    if (offset >= threshold)
+                    {
+                        x += yIncr;
+                        threshold += 1;
+                    }
+
+                    points.Add(new Point(x, y));
+                    offset += delta;
                 }
             }
         }
