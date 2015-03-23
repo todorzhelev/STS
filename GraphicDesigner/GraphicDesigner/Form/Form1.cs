@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using System.Diagnostics;
 
+
 namespace GraphicDesigner
 {
     public partial class STS : Form
@@ -52,13 +53,17 @@ namespace GraphicDesigner
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        } 
+        
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog OD = new OpenFileDialog();
-            OD.ShowDialog();
-            //your code goes here
+            OD.ShowDialog();     
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,9 +94,9 @@ namespace GraphicDesigner
 
         }
 
-        private void Curve_Click(object sender, EventArgs e)
+        private void Circle_Click(object sender, EventArgs e)
         {
-            this.options.FigureType = FigureType.Curve;
+            this.options.FigureType = FigureType.Ellipse;
         }
 
         private void Point_Click(object sender, EventArgs e)
@@ -99,14 +104,38 @@ namespace GraphicDesigner
             throw new NotImplementedException();
         }
 
-        private void Circle_Click(object sender, EventArgs e)
+        private void Curve_Click(object sender, EventArgs e)
         {
-            this.options.FigureType = FigureType.Ellipse;
+            this.options.FigureType = FigureType.Curve;
         }
+        
 
         private void Line_Click(object sender, EventArgs e)
         {
             this.options.FigureType = FigureType.Line;
         }
+
+        private void Rectangle_Click(object sender, EventArgs e)
+        {
+            this.options.FigureType = FigureType.Rectangle;
+        }
+        
+        ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bezier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spline_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

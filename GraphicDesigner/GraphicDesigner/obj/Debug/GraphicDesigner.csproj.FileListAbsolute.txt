@@ -1,0 +1,9 @@
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\bin\Debug\GraphicDesigner.exe.config
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\bin\Debug\GraphicDesigner.exe
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\bin\Debug\GraphicDesigner.pdb
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.csprojResolveAssemblyReference.cache
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.Properties.Resources.resources
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.csproj.GenerateResource.Cache
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.exe
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.pdb
+F:\Softuerno injenerstvo\Vtori kurs\ПММРП\trunk\GraphicDesigner\GraphicDesigner\obj\Debug\GraphicDesigner.STS.resources

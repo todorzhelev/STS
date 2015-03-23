@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STS));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,11 +40,20 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ColorButton = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.line1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.line2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.line3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spline = new System.Windows.Forms.Button();
+            this.bezier = new System.Windows.Forms.Button();
+            this.brush = new System.Windows.Forms.Button();
+            this.Rectangle = new System.Windows.Forms.Button();
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
             this.Curve = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,6 +67,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -63,6 +75,12 @@
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
@@ -98,6 +116,61 @@
             this.ColorButton.UseVisualStyleBackColor = false;
             this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             // 
+            // contextMenuStrip1
+            // 
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.line1ToolStripMenuItem,
+            this.line2ToolStripMenuItem,
+            this.line3ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            // 
+            // line1ToolStripMenuItem
+            // 
+            this.line1ToolStripMenuItem.Name = "line1ToolStripMenuItem";
+            resources.ApplyResources(this.line1ToolStripMenuItem, "line1ToolStripMenuItem");
+            // 
+            // line2ToolStripMenuItem
+            // 
+            this.line2ToolStripMenuItem.Name = "line2ToolStripMenuItem";
+            resources.ApplyResources(this.line2ToolStripMenuItem, "line2ToolStripMenuItem");
+            // 
+            // line3ToolStripMenuItem
+            // 
+            this.line3ToolStripMenuItem.Name = "line3ToolStripMenuItem";
+            resources.ApplyResources(this.line3ToolStripMenuItem, "line3ToolStripMenuItem");
+            // 
+            // spline
+            // 
+            this.spline.Image = global::GraphicDesigner.Properties.Resources.spline1;
+            resources.ApplyResources(this.spline, "spline");
+            this.spline.Name = "spline";
+            this.spline.UseVisualStyleBackColor = true;
+            this.spline.Click += new System.EventHandler(this.spline_Click);
+            // 
+            // bezier
+            // 
+            resources.ApplyResources(this.bezier, "bezier");
+            this.bezier.Image = global::GraphicDesigner.Properties.Resources.bezier1;
+            this.bezier.Name = "bezier";
+            this.bezier.UseVisualStyleBackColor = true;
+            this.bezier.Click += new System.EventHandler(this.bezier_Click);
+            // 
+            // brush
+            // 
+            resources.ApplyResources(this.brush, "brush");
+            this.brush.ContextMenuStrip = this.contextMenuStrip1;
+            this.brush.Name = "brush";
+            this.brush.UseVisualStyleBackColor = true;
+            this.brush.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Rectangle
+            // 
+            resources.ApplyResources(this.Rectangle, "Rectangle");
+            this.Rectangle.Name = "Rectangle";
+            this.Rectangle.UseVisualStyleBackColor = true;
+            this.Rectangle.Click += new System.EventHandler(this.Rectangle_Click);
+            // 
             // Line
             // 
             resources.ApplyResources(this.Line, "Line");
@@ -111,6 +184,7 @@
             // 
             resources.ApplyResources(this.Circle, "Circle");
             this.Circle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Circle.Image = global::GraphicDesigner.Properties.Resources.circle;
             this.Circle.Name = "Circle";
             this.Circle.UseVisualStyleBackColor = true;
             this.Circle.Click += new System.EventHandler(this.Circle_Click);
@@ -128,6 +202,7 @@
             // 
             resources.ApplyResources(this.Curve, "Curve");
             this.Curve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Curve.Image = global::GraphicDesigner.Properties.Resources.curve1;
             this.Curve.Name = "Curve";
             this.Curve.UseVisualStyleBackColor = true;
             this.Curve.Click += new System.EventHandler(this.Curve_Click);
@@ -138,6 +213,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.spline);
+            this.Controls.Add(this.bezier);
+            this.Controls.Add(this.brush);
+            this.Controls.Add(this.Rectangle);
             this.Controls.Add(this.Line);
             this.Controls.Add(this.Circle);
             this.Controls.Add(this.Point);
@@ -152,6 +231,7 @@
             this.Load += new System.EventHandler(this.STS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,10 +248,18 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button Point;
-        private System.Windows.Forms.Button Curve;
         private System.Windows.Forms.Button Circle;
         private System.Windows.Forms.Button ColorButton;
         private System.Windows.Forms.Button Line;
+        private System.Windows.Forms.Button Rectangle;
+        private System.Windows.Forms.Button brush;
+        private System.Windows.Forms.ToolStripMenuItem line1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem line2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem line3ToolStripMenuItem;
+        private System.Windows.Forms.Button bezier;
+        private System.Windows.Forms.Button spline;
+        private System.Windows.Forms.Button Curve;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
