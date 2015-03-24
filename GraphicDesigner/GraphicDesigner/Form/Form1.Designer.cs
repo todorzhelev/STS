@@ -129,16 +129,19 @@
             // 
             this.line1ToolStripMenuItem.Name = "line1ToolStripMenuItem";
             resources.ApplyResources(this.line1ToolStripMenuItem, "line1ToolStripMenuItem");
+            this.line1ToolStripMenuItem.Click += new System.EventHandler(this.line1ToolStripMenuItem_Click_1);
             // 
             // line2ToolStripMenuItem
             // 
             this.line2ToolStripMenuItem.Name = "line2ToolStripMenuItem";
             resources.ApplyResources(this.line2ToolStripMenuItem, "line2ToolStripMenuItem");
+            this.line2ToolStripMenuItem.Click += new System.EventHandler(this.line2ToolStripMenuItem_Click);
             // 
             // line3ToolStripMenuItem
             // 
             this.line3ToolStripMenuItem.Name = "line3ToolStripMenuItem";
             resources.ApplyResources(this.line3ToolStripMenuItem, "line3ToolStripMenuItem");
+            this.line3ToolStripMenuItem.Click += new System.EventHandler(this.line3ToolStripMenuItem_Click);
             // 
             // spline
             // 

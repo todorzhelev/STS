@@ -234,32 +234,32 @@
   <data name="contextMenuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 9pt</value>
   </data>
+  <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="line1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>line 1</value>
+  </data>
+  <data name="line2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="line2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>line 2</value>
+  </data>
+  <data name="line3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
+    <value>line 3</value>
+  </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 70</value>
+    <value>153, 92</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="line1ToolStripMenuItem.Text" xml:space="preserve">
-    <value>line 1</value>
-  </data>
-  <data name="line2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="line2ToolStripMenuItem.Text" xml:space="preserve">
-    <value>line 2</value>
-  </data>
-  <data name="line3ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
-  </data>
-  <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
-    <value>line 3</value>
   </data>
   <data name="spline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -288,7 +288,7 @@
   <data name="bezier.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
+        wQAADsEBuJFr7QAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
         vgUtjBSCMhmCjkJQJkPQUQjKZAg6CkGZDEFHISiTIegoBGWyAheF6KNVBh2F6KNVAJcEEk1pEY08Wjm4
         JJCItKJFVLHRwiWBhGKghUgCiYTaWojkkEuoqoVFDrmcelpY5JCbUUMLhRmkS9yrRf8SnFjgYi16bsHp
         Zf7XosNxuL/KXi1KnoNaO9g4Sr3TUG43ixeodxrKHaR8jZJ/QYlzFKpQfhWO3sZvA9qW4EQVdmmRq0jW
@@ -328,7 +328,7 @@
   <data name="brush.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAAAxCAIAAAC5/3vJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
+        wQAADsEBuJFr7QAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
         dBNu4Wi6HPlxkXCRcJFwkXCRcJFwkXCRcJFw0U24OTTYmTQ7wj0yaXaEe2TS7Nw88YRwkXCRcJFwkXCR
         cJFwkXCRcJFwkXDROdwctVxMoJ/DPCv8MZk2wr0wmTbCvTCZNofha1a4mEA/55mHhIuEi4SLhIuEi4SL
         hIuEi4SLhEvW9QPemagJ6AVXNQAAAABJRU5ErkJggg==
@@ -364,7 +364,7 @@
   <data name="Rectangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
+        wQAADsEBuJFr7QAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
         QodZI3TcZ7H+Ek/BalbHU7Ca1fEUrGZ1PAWrWR1PwWpWx1OwmtXxFKxmdTwFq1kdT8FqVsdTsJrV8RSs
         ZnU8BatZHU/BalbHU7Ca1fEUrPdZ/0eHWSN0mDVCxyXrPczaYdbcWifqfchRpL8yAQAAAABJRU5ErkJg
         gg==
@@ -403,7 +403,7 @@
   <data name="Line.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
+        wQAADsEBuJFr7QAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
         RdGOr6tpWbS8YVjNySLE2FYTsqgwtt3oLCqM7c3QLCqMzcZlUWFsHwZlUWFsJSOyqDC2A+lZVBjbsdws
         Koztq8QsKoztTFYWFcZWISWLCmOrE59FhbFVC86iwthaRGZRYWyNwrKoMLZ2MVlUGNslAVlUGNtV3f9f
         wtah76cuYetz/RUqjK3bxYeoMLYIV96iwtiCND9HhbHFaXuRCmML1fAoFcYWrfZdKowtQdXTVBhbjvPX
@@ -557,7 +557,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>226</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

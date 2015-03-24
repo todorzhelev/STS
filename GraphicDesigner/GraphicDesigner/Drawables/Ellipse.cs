@@ -32,7 +32,7 @@ namespace GraphicDesigner.Drawables
 
         public void mouseMove(Point mouseCoords)
         {
-            throw new NotImplementedException();
+           
         }
 
         private void GeneratePoints()
