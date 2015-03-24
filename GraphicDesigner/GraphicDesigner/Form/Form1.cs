@@ -108,13 +108,7 @@ namespace GraphicDesigner
         private void Point_Click(object sender, EventArgs e)
         {
             //throw new NotImplementedException();
-        }
-
-        private void Curve_Click(object sender, EventArgs e)
-        {
-            this.options.FigureType = FigureType.Curve;
-        }
-        
+        }      
 
         private void Line_Click(object sender, EventArgs e)
         {
@@ -134,15 +128,13 @@ namespace GraphicDesigner
 
         private void bezier_Click(object sender, EventArgs e)
         {
-
+            this.options.FigureType = FigureType.BezierCurve;
         }
 
         private void spline_Click(object sender, EventArgs e)
         {
-
+            this.options.FigureType = FigureType.SplineCurve;
         }
-
-     
 
         private void line1ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {

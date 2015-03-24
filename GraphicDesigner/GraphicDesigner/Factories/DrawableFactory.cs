@@ -18,8 +18,10 @@ namespace GraphicDesigner
                     return new Drawables.Ellipse();
                 case FigureType.Rectangle:
                     return new Drawables.Rectangle();
-                case FigureType.Curve:
-                    return new Drawables.Curve();
+                case FigureType.BezierCurve:
+                    return new Drawables.BezierCurve();
+                case FigureType.SplineCurve:
+                    return new Drawables.SplineCurve();
                 case FigureType.Pencil:
                     return new Drawables.Pencil();
                 default:

@@ -51,7 +51,6 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
-            this.Curve = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -201,15 +200,6 @@
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
             // 
-            // Curve
-            // 
-            resources.ApplyResources(this.Curve, "Curve");
-            this.Curve.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Curve.Image = global::GraphicDesigner.Properties.Resources.curve1;
-            this.Curve.Name = "Curve";
-            this.Curve.UseVisualStyleBackColor = true;
-            this.Curve.Click += new System.EventHandler(this.Curve_Click);
-            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
@@ -223,7 +213,6 @@
             this.Controls.Add(this.Line);
             this.Controls.Add(this.Circle);
             this.Controls.Add(this.Point);
-            this.Controls.Add(this.Curve);
             this.Controls.Add(this.ColorButton);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.PanNW;
@@ -261,7 +250,6 @@
         private System.Windows.Forms.ToolStripMenuItem line3ToolStripMenuItem;
         private System.Windows.Forms.Button bezier;
         private System.Windows.Forms.Button spline;
-        private System.Windows.Forms.Button Curve;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
 
      

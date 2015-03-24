@@ -7,37 +7,16 @@ using System.Drawing;
 
 namespace GraphicDesigner.Drawables
 {
-    class Curve : IDrawable
+    abstract class Curve : IDrawable
     {
-        public IList<Point> GetPoints()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract IList<Point> GetPoints();
 
-        public void mouseDown(Point mouseCoords)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void mouseDown(Point mouseCoords);
 
-        public void mouseUp(Point mouseCoords)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void mouseUp(Point mouseCoords);
 
-        public void mouseMove(Point mouseCoords)
-        {
-        }
+        public abstract void mouseMove(Point mouseCoords);
 
-        public FigureType FigureType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public FigureType FigureType { get; set; }
     }
 }

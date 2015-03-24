@@ -12,6 +12,8 @@ namespace GraphicDesigner
         Ellipse,
         Rectangle,
         Curve,
+        BezierCurve,
+        SplineCurve,
         Pencil
     }
 }
