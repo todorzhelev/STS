@@ -69,7 +69,16 @@ namespace GraphicDesigner
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog OD = new OpenFileDialog();
-            OD.ShowDialog();     
+            OD.Title = "Open Photo";
+            OD.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*" ;
+
+            if (OD.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(OD.OpenFile());
+            }
+                OD.Dispose();
+
+                OD.ShowDialog();     
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,6 +158,11 @@ namespace GraphicDesigner
         private void line3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.options.BrushSize = Utilities.BrushSize.Large;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
        
     }
