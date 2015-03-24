@@ -30,6 +30,11 @@ namespace GraphicDesigner.Drawables
             GeneratePoints();
         }
 
+        public void mouseMove(Point mouseCoords)
+        {
+            throw new NotImplementedException();
+        }
+
         private void GeneratePoints()
         {
             points = new List<Point>();

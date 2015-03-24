@@ -32,9 +32,15 @@ namespace GraphicDesigner.Drawables
             Point p1 = new Point(sx, sy);
             Point p2 = new Point(mouseCoords.X, mouseCoords.Y);
 
+            GeneratePoints(p1, p2);
+
             //Point p1 = new Point(1, 1);
             //Point p2 = new Point(4, 3);
 
+        }
+
+        public void GeneratePoints(Point p1, Point p2)
+        {
             int x1 = p1.X;
             int x2 = p2.X;
             int y1 = p1.Y;
@@ -49,17 +55,17 @@ namespace GraphicDesigner.Drawables
             float offset = 0;
             float threshold = 0.5f;
 
-            if( slope >= -1 && slope <= 1)
+            if (slope >= -1 && slope <= 1)
             {
                 float delta = Math.Abs(slope);
                 int y = y1;
-                if( x2 < x1 )
+                if (x2 < x1)
                 {
                     Utilities.Misc.Swap(ref x1, ref x2);
                     y = y2;
                 }
 
-                for( int x = x1; x <= x2; x++)
+                for (int x = x1; x <= x2; x++)
                 {
                     if (offset >= threshold)
                     {
@@ -75,13 +81,13 @@ namespace GraphicDesigner.Drawables
             {
                 float delta = Math.Abs((float)deltaX / deltaY);
                 int x = x1;
-                if( y2 < y1 ) 
+                if (y2 < y1)
                 {
                     Utilities.Misc.Swap(ref y1, ref y2);
                     x = x2;
                 }
 
-                for( int y = y1; y <= y2; y++)
+                for (int y = y1; y <= y2; y++)
                 {
                     if (offset >= threshold)
                     {
@@ -93,6 +99,10 @@ namespace GraphicDesigner.Drawables
                     offset += delta;
                 }
             }
+        }
+        public void mouseMove(Point mouseCoords)
+        {
+            throw new NotImplementedException();
         }
 
         public FigureType FigureType

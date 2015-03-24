@@ -11,6 +11,7 @@ namespace GraphicDesigner
         Line,
         Ellipse,
         Rectangle,
-        Curve
+        Curve,
+        Pencil
     }
 }

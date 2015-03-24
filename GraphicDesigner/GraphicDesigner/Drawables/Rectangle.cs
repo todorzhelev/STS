@@ -24,6 +24,10 @@ namespace GraphicDesigner.Drawables
             throw new NotImplementedException();
         }
 
+        public void mouseMove(Point mouseCoords)
+        {
+            throw new NotImplementedException();
+        }
 
         public FigureType FigureType
         {

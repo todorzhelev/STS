@@ -12,6 +12,7 @@ namespace GraphicDesigner
         IList<Point> GetPoints();
         void mouseDown(Point mouseCoords);
         void mouseUp(Point mouseCoords);
+        void mouseMove(Point mouseCoords);
 
         FigureType FigureType { get; set; }
     }

@@ -20,6 +20,8 @@ namespace GraphicDesigner
                     return new Drawables.Rectangle();
                 case FigureType.Curve:
                     return new Drawables.Curve();
+                case FigureType.Pencil:
+                    return new Drawables.Pencil();
                 default:
                     return new Drawables.Line();
             }

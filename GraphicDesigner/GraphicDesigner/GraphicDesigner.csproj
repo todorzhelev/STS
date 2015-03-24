@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drawables\Pencil.cs" />
     <Compile Include="Factories\DrawableFactory.cs" />
     <Compile Include="Drawables\Curve.cs" />
     <Compile Include="Drawables\Ellipse.cs" />

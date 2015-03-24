@@ -17,7 +17,7 @@ namespace GraphicDesigner
     {
         private const Utilities.BrushSize DefaultBrushSize = Utilities.BrushSize.Small;
         private static readonly Color DefaultColor = Color.Blue;
-        private const FigureType DefaultFigureType = FigureType.Line;
+        private const FigureType DefaultFigureType = FigureType.Pencil;
 
         private Graphics graphics;
         private Renderer renderer;
@@ -29,6 +29,7 @@ namespace GraphicDesigner
             this.graphics = this.CreateGraphics();
             this.MouseDown += this.mouseDown;
             this.MouseUp += this.mouseUp;
+            this.MouseMove += this.mouseMove;
             this.renderer = new Renderer();
             this.renderer.SetGraphics(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
@@ -46,6 +47,11 @@ namespace GraphicDesigner
             IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
             renderer.Render(coords, this.options);
+        }
+
+        private void mouseMove(object sender, MouseEventArgs e)
+        {
+            this.options.CurrentFigure.mouseMove(new Point(e.X, e.Y));
         }
 
 
