@@ -15,14 +15,18 @@ namespace GraphicDesigner.Drawables
         }
 
         private IList<Point> ControlPoints { get; set; }
+        private const double Step = 0.001;
 
         public override IList<Point> GetPoints()
         {
             var points = new List<Point>();
-
-            for (int i = 0; i < this.ControlPoints.Count; i++)
+            if (this.ControlPoints.Count > 1)
             {
-                // TODO
+                for (double i = 0; i <= 1; i += Step)
+                {
+                    var point = C(i);
+                    points.Add(point);
+                }
             }
 
             return points;
@@ -42,23 +46,23 @@ namespace GraphicDesigner.Drawables
             //throw new NotImplementedException();
         }
 
-        private Point C(int u, IList<Point> points)
+        private Point C(double u)
         {
             double sumX = 0;
             double sumY = 0;
-            int n = points.Count;
+            int n = this.ControlPoints.Count - 1;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i <= n; i++)
             {
                 double Bniu = B(n, i, u);
-                sumX += Bniu * points.ElementAt(i).X;
-                sumY += Bniu * points.ElementAt(i).Y;
+                sumX += Bniu * this.ControlPoints.ElementAt(i).X;
+                sumY += Bniu * this.ControlPoints.ElementAt(i).Y;
             }
 
             return new Point((int)sumX, (int)sumY);
         }
 
-        private double B(int n, int i, int u)
+        private double B(int n, int i, double u)
         {
             return Binomial(n, i) * Math.Pow(u, i) * Math.Pow(1 - u, n - i);
         }
