@@ -74,7 +74,7 @@ namespace GraphicDesigner
 
             if (OD.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = new Bitmap(OD.OpenFile());
+                ///pictureBox1.Image = new Bitmap(OD.OpenFile());
             }
                 OD.Dispose();
 
