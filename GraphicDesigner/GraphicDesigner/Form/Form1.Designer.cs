@@ -51,10 +51,8 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -202,20 +200,12 @@
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.spline);
             this.Controls.Add(this.bezier);
             this.Controls.Add(this.brush);
@@ -234,7 +224,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,7 +251,6 @@
         private System.Windows.Forms.Button bezier;
         private System.Windows.Forms.Button spline;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
