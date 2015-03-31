@@ -63,7 +63,7 @@ namespace GraphicDesigner
         
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            graphics.Clear(Color.White);
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace GraphicDesigner
 
         private void Point_Click(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            this.options.FigureType = FigureType.Pencil;
         }      
 
         private void Line_Click(object sender, EventArgs e)
