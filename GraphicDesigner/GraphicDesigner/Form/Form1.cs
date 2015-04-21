@@ -133,7 +133,7 @@ namespace GraphicDesigner
         ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            contextMenuStrip1.Show(Control.MousePosition);
         }
 
         private void bezier_Click(object sender, EventArgs e)
