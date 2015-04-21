@@ -106,6 +106,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // colorDialog1
+            // 
+            this.colorDialog1.FullOpen = true;
+            // 
             // ColorButton
             // 
             this.ColorButton.BackColor = System.Drawing.Color.White;

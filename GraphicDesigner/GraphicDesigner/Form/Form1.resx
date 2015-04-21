@@ -121,40 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>949, 31</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Showcard Gothic, 14.25pt</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 27</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 28</value>
   </data>
@@ -188,6 +154,40 @@
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 14.25pt</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>949, 31</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
@@ -234,15 +234,6 @@
   <data name="contextMenuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 9pt</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 70</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 22</value>
   </data>
@@ -260,6 +251,15 @@
   </data>
   <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
     <value>line 3</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 70</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="spline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -288,7 +288,7 @@
   <data name="bezier.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
+        vwAADr8BOAVTJAAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
         vgUtjBSCMhmCjkJQJkPQUQjKZAg6CkGZDEFHISiTIegoBGWyAheF6KNVBh2F6KNVAJcEEk1pEY08Wjm4
         JJCItKJFVLHRwiWBhGKghUgCiYTaWojkkEuoqoVFDrmcelpY5JCbUUMLhRmkS9yrRf8SnFjgYi16bsHp
         Zf7XosNxuL/KXi1KnoNaO9g4Sr3TUG43ixeodxrKHaR8jZJ/QYlzFKpQfhWO3sZvA9qW4EQVdmmRq0jW
@@ -328,7 +328,7 @@
   <data name="brush.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAAAxCAIAAAC5/3vJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
+        vwAADr8BOAVTJAAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
         dBNu4Wi6HPlxkXCRcJFwkXCRcJFwkXCRcJFw0U24OTTYmTQ7wj0yaXaEe2TS7Nw88YRwkXCRcJFwkXCR
         cJFwkXCRcJFwkXDROdwctVxMoJ/DPCv8MZk2wr0wmTbCvTCZNofha1a4mEA/55mHhIuEi4SLhIuEi4SL
         hIuEi4SLhEvW9QPemagJ6AVXNQAAAABJRU5ErkJggg==
@@ -364,7 +364,7 @@
   <data name="Rectangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
+        vwAADr8BOAVTJAAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
         QodZI3TcZ7H+Ek/BalbHU7Ca1fEUrGZ1PAWrWR1PwWpWx1OwmtXxFKxmdTwFq1kdT8FqVsdTsJrV8RSs
         ZnU8BatZHU/BalbHU7Ca1fEUrPdZ/0eHWSN0mDVCxyXrPczaYdbcWifqfchRpL8yAQAAAABJRU5ErkJg
         gg==
@@ -403,7 +403,7 @@
   <data name="Line.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
+        vwAADr8BOAVTJAAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
         RdGOr6tpWbS8YVjNySLE2FYTsqgwtt3oLCqM7c3QLCqMzcZlUWFsHwZlUWFsJSOyqDC2A+lZVBjbsdws
         Koztq8QsKoztTFYWFcZWISWLCmOrE59FhbFVC86iwthaRGZRYWyNwrKoMLZ2MVlUGNslAVlUGNtV3f9f
         wtah76cuYetz/RUqjK3bxYeoMLYIV96iwtiCND9HhbHFaXuRCmML1fAoFcYWrfZdKowtQdXTVBhbjvPX
