@@ -33,6 +33,7 @@ namespace GraphicDesigner
             this.renderer = new Renderer();
             this.renderer.SetGraphics(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
+            this.Cursor = Cursors.Default;
         }
 
         private void mouseDown(object sender, MouseEventArgs e)

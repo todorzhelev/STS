@@ -176,7 +176,7 @@
             // Line
             // 
             resources.ApplyResources(this.Line, "Line");
-            this.Line.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.Line.Cursor = System.Windows.Forms.Cursors.Default;
             this.Line.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Line.Name = "Line";
             this.Line.UseVisualStyleBackColor = true;
