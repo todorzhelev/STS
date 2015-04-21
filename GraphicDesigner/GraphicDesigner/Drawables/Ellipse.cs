@@ -16,13 +16,13 @@ namespace GraphicDesigner.Drawables
 
         public void mouseDown(Point mouseCoords)
         {
-            cx = mouseCoords.X;
-            cy = mouseCoords.Y;
+            center.X = mouseCoords.X;
+            center.Y = mouseCoords.Y;
         }
 
         public void mouseUp(Point mouseCoords)
         {
-            Point p1 = new Point(cx, cy);
+            Point p1 = new Point(center.X, center.Y);
             Point p2 = new Point(mouseCoords.X, mouseCoords.Y);
             double distance = Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
             radius = (int)distance;
@@ -42,8 +42,9 @@ namespace GraphicDesigner.Drawables
             for (double i = 0; i < 360; i += 0.3)
             {
                 double angle = i * System.Math.PI / 180;
-                int x = (int)(cx + radius * System.Math.Cos(angle));
-                int y = (int)(cy + radius * System.Math.Sin(angle));
+
+                int x = (int)(center.X + radius * System.Math.Cos(angle));
+                int y = (int)(center.Y + radius * System.Math.Sin(angle));
                 Point p = new Point(x, y);
                 points.Add(p);
             }
@@ -57,7 +58,8 @@ namespace GraphicDesigner.Drawables
         public FigureType FigureType { get; set; }
 
         private IList<Point> points;
-        private int cx, cy;
+
+        private Point center;
         private int radius;
     }
 }

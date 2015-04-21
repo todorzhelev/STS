@@ -23,20 +23,13 @@ namespace GraphicDesigner.Drawables
         {
             points = new List<Point>();
 
-            sx = mouseCoords.X;
-            sy = mouseCoords.Y;
+            start = mouseCoords;
         }
 
         public void mouseUp(Point mouseCoords)
         {
-            Point p1 = new Point(sx, sy);
-            Point p2 = new Point(mouseCoords.X, mouseCoords.Y);
-
-            GeneratePoints(p1, p2);
-
-            //Point p1 = new Point(1, 1);
-            //Point p2 = new Point(4, 3);
-
+            Point end = new Point(mouseCoords.X, mouseCoords.Y);
+            GeneratePoints(start, end);
         }
 
         public void GeneratePoints(Point p1, Point p2)
@@ -46,10 +39,13 @@ namespace GraphicDesigner.Drawables
             int y1 = p1.Y;
             int y2 = p2.Y;
 
+            //finds the slope of the line
             int deltaX = x2 - x1;
             int deltaY = y2 - y1;
             float slope = (float)deltaY / deltaX;
 
+            //if the slope is positive we will go upwards
+            //if the slope is negative we will go downwards
             int yIncr = slope >= 0 ? 1 : -1;
 
             float offset = 0;
@@ -117,6 +113,6 @@ namespace GraphicDesigner.Drawables
         }
 
         private IList<Point> points;
-        private int sx, sy;
+        private Point start;
     }
 }
