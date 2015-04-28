@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawables\BezierCurve.cs" />
+    <Compile Include="Drawables\Eraser.cs" />
     <Compile Include="Drawables\Pencil.cs" />
     <Compile Include="Drawables\SplineCurve.cs" />
     <Compile Include="Factories\DrawableFactory.cs" />

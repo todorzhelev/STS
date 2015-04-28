@@ -51,6 +51,7 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
+            this.eraser = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -204,12 +205,20 @@
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
             // 
+            // eraser
+            // 
+            resources.ApplyResources(this.eraser, "eraser");
+            this.eraser.Name = "eraser";
+            this.eraser.UseVisualStyleBackColor = true;
+            this.eraser.Click += new System.EventHandler(this.eraser_Click);
+            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.eraser);
             this.Controls.Add(this.spline);
             this.Controls.Add(this.bezier);
             this.Controls.Add(this.brush);
@@ -255,6 +264,7 @@
         private System.Windows.Forms.Button bezier;
         private System.Windows.Forms.Button spline;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.Button eraser;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

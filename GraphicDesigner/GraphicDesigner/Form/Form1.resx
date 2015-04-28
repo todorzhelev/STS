@@ -187,7 +187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
@@ -226,7 +226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ColorButton.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>519, 21</value>
@@ -283,12 +283,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;spline.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="bezier.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
+        vgAADr4B6kKxwAAAAYpJREFUWEftktsBgyAMAJ3LgZjHaVymw1gglxYqvqoSPrwPHgkkV2w3NUkTWp3C
         vgUtjBSCMhmCjkJQJkPQUQjKZAg6CkGZDEFHISiTIegoBGWyAheF6KNVBh2F6KNVAJcEEk1pEY08Wjm4
         JJCItKJFVLHRwiWBhGKghUgCiYTaWojkkEuoqoVFDrmcelpY5JCbUUMLhRmkS9yrRf8SnFjgYi16bsHp
         Zf7XosNxuL/KXi1KnoNaO9g4Sr3TUG43ixeodxrKHaR8jZJ/QYlzFKpQfhWO3sZvA9qW4EQVdmmRq0jW
@@ -323,12 +323,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bezier.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="brush.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAAAxCAIAAAC5/3vJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
+        vgAADr4B6kKxwAAAALFJREFUaEPt1zsKw0AMQEHf/9JOMAr4F7BfPdNpUfXYRstKIlwkXCRcJFwkXCRc
         dBNu4Wi6HPlxkXCRcJFwkXCRcJFwkXCRcJFw0U24OTTYmTQ7wj0yaXaEe2TS7Nw88YRwkXCRcJFwkXCR
         cJFwkXCRcJFwkXDROdwctVxMoJ/DPCv8MZk2wr0wmTbCvTCZNofha1a4mEA/55mHhIuEi4SLhIuEi4SL
         hIuEi4SLhEvW9QPemagJ6AVXNQAAAABJRU5ErkJggg==
@@ -359,12 +359,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;brush.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Rectangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
+        vgAADr4B6kKxwAAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
         QodZI3TcZ7H+Ek/BalbHU7Ca1fEUrGZ1PAWrWR1PwWpWx1OwmtXxFKxmdTwFq1kdT8FqVsdTsJrV8RSs
         ZnU8BatZHU/BalbHU7Ca1fEUrPdZ/0eHWSN0mDVCxyXrPczaYdbcWifqfchRpL8yAQAAAABJRU5ErkJg
         gg==
@@ -392,7 +392,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Rectangle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Line.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -403,7 +403,7 @@
   <data name="Line.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
+        vgAADr4B6kKxwAAAATlJREFUWEft0EGOgzAQBdHc/9JMBIWSmphg426bRd5u+Bp3KY/lliZnPXb8vZuZ
         RdGOr6tpWbS8YVjNySLE2FYTsqgwtt3oLCqM7c3QLCqMzcZlUWFsHwZlUWFsJSOyqDC2A+lZVBjbsdws
         Koztq8QsKoztTFYWFcZWISWLCmOrE59FhbFVC86iwthaRGZRYWyNwrKoMLZ2MVlUGNslAVlUGNtV3f9f
         wtah76cuYetz/RUqjK3bxYeoMLYIV96iwtiCND9HhbHFaXuRCmML1fAoFcYWrfZdKowtQdXTVBhbjvPX
@@ -436,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Line.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Circle.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -469,7 +469,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Circle.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Point.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt, style=Italic</value>
@@ -518,7 +518,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Point.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="eraser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
+        QodZI3TcZ7H+Ek/BalbHU7Ca1fEUrGZ1PAWrWR1PwWpWx1OwmtXxFKxmdTwFq1kdT8FqVsdTsJrV8RSs
+        ZnU8BatZHU/BalbHU7Ca1fEUrPdZ/0eHWSN0mDVCxyXrPczaYdbcWifqfchRpL8yAQAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="eraser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="eraser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>836, 315</value>
+  </data>
+  <data name="eraser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 58</value>
+  </data>
+  <data name="eraser.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;eraser.Name" xml:space="preserve">
+    <value>eraser</value>
+  </data>
+  <data name="&gt;&gt;eraser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eraser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;eraser.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

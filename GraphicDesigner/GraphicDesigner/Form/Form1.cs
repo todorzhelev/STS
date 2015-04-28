@@ -19,6 +19,9 @@ namespace GraphicDesigner
         private static readonly Color DefaultColor = Color.Blue;
         private const FigureType DefaultFigureType = FigureType.Pencil;
 
+        private  InputOptions prevOptions;
+        private bool IsEraserUsed;
+
         private Graphics graphics;
         private Renderer renderer;
         private InputOptions options;
@@ -34,8 +37,20 @@ namespace GraphicDesigner
             this.renderer.SetGraphics(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
             this.Cursor = Cursors.Default;
+            this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
+            this.IsEraserUsed = false;
         }
 
+        private void ApplyPreviousOptions()
+        {
+            if (this.IsEraserUsed )
+            {
+                this.options.Color = this.prevOptions.Color;
+                this.options.BrushSize = this.prevOptions.BrushSize;
+            }
+
+            this.IsEraserUsed = false;
+        }
         private void mouseDown(object sender, MouseEventArgs e)
         {
             this.options.CurrentFigure.mouseDown(new Point(e.X, e.Y));
@@ -112,21 +127,25 @@ namespace GraphicDesigner
 
         private void Circle_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.Ellipse;
         }
 
         private void Point_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.Pencil;
         }      
 
         private void Line_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.Line;
         }
 
         private void Rectangle_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.Rectangle;
         }
         
@@ -138,11 +157,13 @@ namespace GraphicDesigner
 
         private void bezier_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.BezierCurve;
         }
 
         private void spline_Click(object sender, EventArgs e)
         {
+            ApplyPreviousOptions();
             this.options.FigureType = FigureType.SplineCurve;
         }
 
@@ -164,6 +185,17 @@ namespace GraphicDesigner
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void eraser_Click(object sender, EventArgs e)
+        {
+            IsEraserUsed = true;
+            this.options.FigureType = FigureType.Eraser;
+            this.prevOptions.Color = this.options.Color;
+            this.prevOptions.BrushSize = this.options.BrushSize;
+            this.prevOptions.FigureType = this.options.FigureType;
+            this.options.Color = Color.White;
+            this.options.BrushSize = Utilities.BrushSize.Large;
         }
        
     }

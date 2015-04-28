@@ -14,6 +14,7 @@ namespace GraphicDesigner
         Curve,
         BezierCurve,
         SplineCurve,
-        Pencil
+        Pencil,
+        Eraser
     }
 }

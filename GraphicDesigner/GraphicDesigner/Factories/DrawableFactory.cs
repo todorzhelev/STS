@@ -24,6 +24,8 @@ namespace GraphicDesigner
                     return new Drawables.SplineCurve();
                 case FigureType.Pencil:
                     return new Drawables.Pencil();
+                case FigureType.Eraser:
+                    return new Drawables.Eraser();
                 default:
                     return new Drawables.Line();
             }
