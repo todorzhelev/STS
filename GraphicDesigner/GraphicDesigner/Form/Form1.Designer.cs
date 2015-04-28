@@ -53,6 +53,7 @@
             this.Point = new System.Windows.Forms.Button();
             this.eraser = new System.Windows.Forms.Button();
             this.Triangle = new System.Windows.Forms.Button();
+            this.Square = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -220,12 +221,20 @@
             this.Triangle.UseVisualStyleBackColor = true;
             this.Triangle.Click += new System.EventHandler(this.Triangle_Click);
             // 
+            // Square
+            // 
+            resources.ApplyResources(this.Square, "Square");
+            this.Square.Name = "Square";
+            this.Square.UseVisualStyleBackColor = true;
+            this.Square.Click += new System.EventHandler(this.Square_Click);
+            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Square);
             this.Controls.Add(this.Triangle);
             this.Controls.Add(this.eraser);
             this.Controls.Add(this.spline);
@@ -275,6 +284,7 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.Button eraser;
         private System.Windows.Forms.Button Triangle;
+        private System.Windows.Forms.Button Square;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

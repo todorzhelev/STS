@@ -28,6 +28,8 @@ namespace GraphicDesigner
                     return new Drawables.Eraser();
                 case FigureType.Triangle:
                     return new Drawables.Triangle();
+                case FigureType.Square:
+                    return new Drawables.Square();
                 default:
                     return new Drawables.Line();
             }

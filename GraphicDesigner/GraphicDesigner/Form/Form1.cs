@@ -203,6 +203,12 @@ namespace GraphicDesigner
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.Triangle;
         }
+
+        private void Square_Click(object sender, EventArgs e)
+        {
+            ApplyPreviousOptions();
+            this.options.FigureType = FigureType.Square;
+        }
        
     }
 }
