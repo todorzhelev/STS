@@ -189,6 +189,40 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 14.25pt</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>880, 31</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
@@ -205,7 +239,7 @@
     <value>NoControl</value>
   </data>
   <data name="ColorButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 19</value>
+    <value>763, 19</value>
   </data>
   <data name="ColorButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 46</value>
@@ -261,11 +295,20 @@
   <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
     <value>line 3</value>
   </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 70</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="spline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="spline.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 187</value>
+    <value>824, 188</value>
   </data>
   <data name="spline.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -305,7 +348,7 @@
     <value>NoControl</value>
   </data>
   <data name="bezier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 251</value>
+    <value>825, 252</value>
   </data>
   <data name="bezier.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -341,7 +384,7 @@
     <value>NoControl</value>
   </data>
   <data name="brush.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 71</value>
+    <value>763, 71</value>
   </data>
   <data name="brush.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 46</value>
@@ -374,7 +417,7 @@
     <value>NoControl</value>
   </data>
   <data name="Rectangle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 251</value>
+    <value>763, 251</value>
   </data>
   <data name="Rectangle.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -415,7 +458,7 @@
     <value>NoControl</value>
   </data>
   <data name="Line.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 123</value>
+    <value>824, 123</value>
   </data>
   <data name="Line.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -448,7 +491,7 @@
     <value>NoControl</value>
   </data>
   <data name="Circle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 187</value>
+    <value>763, 187</value>
   </data>
   <data name="Circle.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -497,7 +540,7 @@
     <value>NoControl</value>
   </data>
   <data name="Point.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 123</value>
+    <value>763, 123</value>
   </data>
   <data name="Point.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 58</value>
@@ -641,7 +684,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>949, 729</value>
+    <value>880, 657</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
