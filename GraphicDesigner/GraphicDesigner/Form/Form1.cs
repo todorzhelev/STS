@@ -62,6 +62,11 @@ namespace GraphicDesigner
 
             IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
+            if (this.options.FigureType == FigureType.BezierCurve)
+            {
+                renderer.RemovePastLayer();
+            }
+
             renderer.Render(coords, this.options);
         }
 
