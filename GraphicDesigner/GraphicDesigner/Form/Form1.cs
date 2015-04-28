@@ -197,6 +197,12 @@ namespace GraphicDesigner
             this.options.Color = Color.White;
             this.options.BrushSize = Utilities.BrushSize.Large;
         }
+
+        private void Triangle_Click(object sender, EventArgs e)
+        {
+            ApplyPreviousOptions();
+            this.options.FigureType = FigureType.Triangle;
+        }
        
     }
 }
