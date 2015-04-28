@@ -128,7 +128,7 @@ namespace GraphicDesigner
         private void Circle_Click(object sender, EventArgs e)
         {
             ApplyPreviousOptions();
-            this.options.FigureType = FigureType.Ellipse;
+            this.options.FigureType = FigureType.Circle;
         }
 
         private void Point_Click(object sender, EventArgs e)
@@ -208,6 +208,12 @@ namespace GraphicDesigner
         {
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.Square;
+        }
+
+        private void Ellipse_Click(object sender, EventArgs e)
+        {
+            ApplyPreviousOptions();
+            this.options.FigureType = FigureType.Ellipse;
         }
        
     }

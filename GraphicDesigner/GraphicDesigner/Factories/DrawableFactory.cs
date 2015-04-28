@@ -14,6 +14,8 @@ namespace GraphicDesigner
             {
                 case FigureType.Line:
                     return new Drawables.Line();
+                case FigureType.Circle:
+                    return new Drawables.Circle();
                 case FigureType.Ellipse:
                     return new Drawables.Ellipse();
                 case FigureType.Rectangle:

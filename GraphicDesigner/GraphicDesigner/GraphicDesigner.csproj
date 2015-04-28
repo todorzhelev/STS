@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawables\BezierCurve.cs" />
+    <Compile Include="Drawables\Ellipse.cs" />
     <Compile Include="Drawables\Eraser.cs" />
     <Compile Include="Drawables\Pencil.cs" />
     <Compile Include="Drawables\SplineCurve.cs" />
@@ -53,7 +54,7 @@
     <Compile Include="Drawables\Triangle.cs" />
     <Compile Include="Factories\DrawableFactory.cs" />
     <Compile Include="Drawables\Curve.cs" />
-    <Compile Include="Drawables\Ellipse.cs" />
+    <Compile Include="Drawables\Circle.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

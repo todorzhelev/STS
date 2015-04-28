@@ -121,6 +121,40 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>949, 31</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Showcard Gothic, 14.25pt</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
   <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 28</value>
   </data>
@@ -154,40 +188,6 @@
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Showcard Gothic, 14.25pt</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 27</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>949, 31</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
@@ -226,13 +226,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ColorButton.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>519, 21</value>
   </metadata>
   <data name="contextMenuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 9pt</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 70</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 22</value>
@@ -251,15 +260,6 @@
   </data>
   <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
     <value>line 3</value>
-  </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 70</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="spline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;spline.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="bezier.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -323,7 +323,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bezier.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="brush.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -359,7 +359,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;brush.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Rectangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -392,7 +392,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Rectangle.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Line.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -436,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Line.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="Circle.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -469,7 +469,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Circle.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Point.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 11.25pt, style=Italic</value>
@@ -518,7 +518,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Point.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="eraser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -545,7 +545,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;eraser.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Triangle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -572,7 +572,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Triangle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Square.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -599,6 +599,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Square.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Ellipse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Ellipse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>836, 379</value>
+  </data>
+  <data name="Ellipse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 58</value>
+  </data>
+  <data name="Ellipse.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Ellipse.Text" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Name" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

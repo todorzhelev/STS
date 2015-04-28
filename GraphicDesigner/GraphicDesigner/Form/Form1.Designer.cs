@@ -54,6 +54,7 @@
             this.eraser = new System.Windows.Forms.Button();
             this.Triangle = new System.Windows.Forms.Button();
             this.Square = new System.Windows.Forms.Button();
+            this.Ellipse = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -228,12 +229,20 @@
             this.Square.UseVisualStyleBackColor = true;
             this.Square.Click += new System.EventHandler(this.Square_Click);
             // 
+            // Ellipse
+            // 
+            resources.ApplyResources(this.Ellipse, "Ellipse");
+            this.Ellipse.Name = "Ellipse";
+            this.Ellipse.UseVisualStyleBackColor = true;
+            this.Ellipse.Click += new System.EventHandler(this.Ellipse_Click);
+            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Ellipse);
             this.Controls.Add(this.Square);
             this.Controls.Add(this.Triangle);
             this.Controls.Add(this.eraser);
@@ -285,6 +294,7 @@
         private System.Windows.Forms.Button eraser;
         private System.Windows.Forms.Button Triangle;
         private System.Windows.Forms.Button Square;
+        private System.Windows.Forms.Button Ellipse;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

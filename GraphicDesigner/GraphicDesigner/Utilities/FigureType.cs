@@ -9,6 +9,7 @@ namespace GraphicDesigner
     enum FigureType
     {
         Line,
+        Circle,
         Ellipse,
         Rectangle,
         Curve,

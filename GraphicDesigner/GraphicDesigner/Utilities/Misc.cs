@@ -8,9 +8,9 @@ namespace GraphicDesigner.Utilities
 {
     public static class Misc
     {
-        public static void Swap(ref int lhs, ref int rhs)
+        public static void Swap<T>(ref T lhs, ref T rhs)
         {
-            int temp;
+            T temp;
             temp = lhs;
             lhs = rhs;
             rhs = temp;
