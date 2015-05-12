@@ -50,7 +50,10 @@ namespace GraphicDesigner
             }
 
             this.IsEraserUsed = false;
+
+            this.renderer.SaveCurrentDrawingToField();
         }
+
         private void mouseDown(object sender, MouseEventArgs e)
         {
             this.options.CurrentFigure.mouseDown(new Point(e.X, e.Y));
@@ -61,11 +64,6 @@ namespace GraphicDesigner
             this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
 
             IList<Point> coords = this.options.CurrentFigure.GetPoints();
-
-            if (this.options.FigureType == FigureType.BezierCurve)
-            {
-                renderer.RemovePastLayer();
-            }
 
             renderer.Render(coords, this.options);
         }

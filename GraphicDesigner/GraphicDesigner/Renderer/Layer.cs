@@ -45,6 +45,7 @@ namespace GraphicDesigner
         public Layer Clone()
         {
             Layer clone = new Layer(this.StartX, this.StartY, this.EndX, this.EndY, this.Level);
+            clone.colorMatrix = this.colorMatrix.Clone();
             return clone;
         }
     }

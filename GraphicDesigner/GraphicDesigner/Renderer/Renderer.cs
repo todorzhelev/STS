@@ -10,18 +10,23 @@ namespace GraphicDesigner
 {
     class Renderer
     {
-        private const int formWidth = 900;
-        private const int formHeight = 700;
+        private const int FormWidth = 900;
+        private const int FormHeight = 700;
 
         public Renderer()
         {
-            this.field = new Layer(0, 0, formWidth, formHeight, (int)LayerLevel.Field);
-            this.pastDrawing = this.field.Clone();
+            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
+            //this.pastDrawing = this.field.Clone();
             this.currentDrawing = this.field.Clone();
         }
 
         public void Render(IList<Point> points, InputOptions options)
         {
+            if (options.FigureType == FigureType.BezierCurve)
+            {
+                this.RemovePastLayer();
+            }
+
             if (points.Count < 1)
             {
                 return;
@@ -55,6 +60,51 @@ namespace GraphicDesigner
             }
         }
 
+        public void RemovePastLayer()
+        {
+            if (this.pastDrawing == null)
+            {
+                return;
+            }
+
+            for (int i = this.pastDrawing.colorMatrix.StartX; i <= this.pastDrawing.colorMatrix.EndX; i++)
+            {
+                for (int j = this.pastDrawing.colorMatrix.StartY; j <= this.pastDrawing.colorMatrix.EndY; j++)
+                {
+                    if (this.field.colorMatrix.Get(i, j) != this.pastDrawing.colorMatrix.Get(i, j))
+                    {
+                        var color = this.field.colorMatrix.Get(i, j);
+                        this.DrawPoint(i, j, color);
+                    }
+                }
+            }
+
+            this.pastDrawing = null;
+
+        }
+
+        public void SaveCurrentDrawingToField()
+        {
+            this.field = this.currentDrawing.Clone();
+        }
+
+        public void SetGraphics(ref Graphics graphics)
+        {
+            this.graphics = graphics;
+        }
+
+
+        private void DrawPoint(int x, int y, Color color)
+        {
+            var brush = new SolidBrush(color);
+            graphics.FillRectangle(brush, x, y, 1, 1);
+
+            //another way to draw points, which is slower
+            //Bitmap bm = new Bitmap(1, 1);
+            //bm.SetPixel(0, 0, Color.Red);
+            //graphics.DrawImageUnscaled(bm, p.x, p.y);
+        }
+
         private Layer GetNewCurrentLayer(IList<Point> points)
         {
             //var maxX = 0;
@@ -86,51 +136,8 @@ namespace GraphicDesigner
             //}
 
             //Layer currLayer = new Layer(minX, minY, maxX, maxY, (int)LayerLevel.Current);
-            Layer currLayer = new Layer(0, 0, 900, 700, (int)LayerLevel.Current);
+            Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
             return currLayer;
-        }
-
-        public void RemovePastLayer()
-        {
-            // TODO
-            if (this.pastDrawing == null)
-            {
-                return;
-            }
-
-            //for (int i = this.pastDrawing.colorMatrix.StartX; i <= this.pastDrawing.colorMatrix.EndX; i++)
-            //{
-            //    for (int j = this.pastDrawing.colorMatrix.StartY; j <= this.pastDrawing.colorMatrix.EndY; j++)
-            //    {
-            //        if (this.field.colorMatrix.Get(i,j) == this.pastDrawing.colorMatrix.Get(i,j))
-            //        {
-            //            var color = this.field.colorMatrix.Get(i, j);
-            //            this.DrawPoint(i, j, Color.White);
-            //        }
-            //    }
-            //}
-            SolidBrush brush = new SolidBrush(Color.White);
-            graphics.FillRectangle(brush, this.pastDrawing.StartX, this.pastDrawing.StartY, this.pastDrawing.Width, this.pastDrawing.Heigth);
-
-            this.pastDrawing = null;
-
-        }
-
-        public void SetGraphics(ref Graphics graphics)
-        {
-            this.graphics = graphics;
-        }
-
-
-        private void DrawPoint(int x, int y, Color color)
-        {
-            var brush = new SolidBrush(color);
-            graphics.FillRectangle(brush, x, y, 1, 1);
-
-            //another way to draw points, which is slower
-            //Bitmap bm = new Bitmap(1, 1);
-            //bm.SetPixel(0, 0, Color.Red);
-            //graphics.DrawImageUnscaled(bm, p.x, p.y);
         }
 
         private Graphics graphics;

@@ -83,6 +83,7 @@ namespace GraphicDesigner
         public ColorMatrix Clone()
         {
             ColorMatrix clone = new ColorMatrix(this.StartX, this.StartY, this.EndX, this.EndY);
+            clone.SetMultiple(this);
             return clone;
         }
     }
