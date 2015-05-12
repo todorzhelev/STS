@@ -103,6 +103,26 @@ namespace GraphicDesigner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elipse {
+            get {
+                object obj = ResourceManager.GetObject("elipse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eraser_512 {
+            get {
+                object obj = ResourceManager.GetObject("Eraser-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap line {
             get {
                 object obj = ResourceManager.GetObject("line", resourceCulture);
@@ -126,6 +146,16 @@ namespace GraphicDesigner.Properties {
         internal static System.Drawing.Bitmap spline1 {
             get {
                 object obj = ResourceManager.GetObject("spline1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap square {
+            get {
+                object obj = ResourceManager.GetObject("square", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

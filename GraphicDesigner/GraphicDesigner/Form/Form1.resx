@@ -121,40 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>949, 31</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="fileToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Showcard Gothic, 14.25pt</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 27</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
   <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 28</value>
   </data>
@@ -221,7 +187,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
@@ -239,10 +205,10 @@
     <value>NoControl</value>
   </data>
   <data name="ColorButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 19</value>
+    <value>744, 19</value>
   </data>
   <data name="ColorButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 46</value>
+    <value>135, 46</value>
   </data>
   <data name="ColorButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -267,15 +233,6 @@
   </metadata>
   <data name="contextMenuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 9pt</value>
-  </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 70</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 22</value>
@@ -304,14 +261,121 @@
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Ellipse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Ellipse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>815, 379</value>
+  </data>
+  <data name="Ellipse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="Ellipse.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Name" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Ellipse.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Square.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Square.Location" type="System.Drawing.Point, System.Drawing">
+    <value>744, 379</value>
+  </data>
+  <data name="Square.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="Square.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Square.Name" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="&gt;&gt;Square.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Square.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Square.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Triangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADcAAAA6CAIAAACbJ1bPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAUJJREFUaEPtzkGWgzAMBFHuf2lmnvzZJJBgLDMDuDZEHatV03wFnmo5TR06fZP4
+        VSyYk8isI7ggzWBY5pHWRS3k/MoTfZIlqeB9bCfZ0ryWtJDQQicQbYSHybQ0L0iH5V6IbKj4r1n0AZYU
+        Pkp40SZ6d0vHA9EaXgSiehIszdt4d76ls4FoG+8CUSWtluZveD0sX3Gw8qSdQ6I3tXQqEO3DTiDazXFL
+        cw02e1s6EohqsBmI9nHQ0lyP/adbqm9QLGip6bmXpeJmxYKu3W03slQZiNrQFYg+UmdpzkBjlqWyQJSB
+        xkC0TYWlOQ+9T7FU00GxoP1b//UtFQSibLQHojV2WZr74MYxS6uBqA9uBKI3vluae+LSPS0tnaJYcG/j
+        4mUtPT9RseDq2t1rWnr417BZGJYNsFl4nf8nwzKPYZnFPP8AvFAzj9ejoWcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Triangle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Triangle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>744, 315</value>
+  </data>
+  <data name="Triangle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="Triangle.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Triangle.Name" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="&gt;&gt;Triangle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Triangle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Triangle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="eraser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="eraser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>815, 315</value>
+  </data>
+  <data name="eraser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="eraser.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;eraser.Name" xml:space="preserve">
+    <value>eraser</value>
+  </data>
+  <data name="&gt;&gt;eraser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eraser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;eraser.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="spline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="spline.Location" type="System.Drawing.Point, System.Drawing">
-    <value>824, 188</value>
+    <value>815, 188</value>
   </data>
   <data name="spline.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>64, 58</value>
   </data>
   <data name="spline.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -348,10 +412,10 @@
     <value>NoControl</value>
   </data>
   <data name="bezier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>825, 252</value>
+    <value>815, 252</value>
   </data>
   <data name="bezier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>65, 58</value>
   </data>
   <data name="bezier.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -384,10 +448,10 @@
     <value>NoControl</value>
   </data>
   <data name="brush.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 71</value>
+    <value>744, 71</value>
   </data>
   <data name="brush.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 46</value>
+    <value>135, 46</value>
   </data>
   <data name="brush.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -417,10 +481,10 @@
     <value>NoControl</value>
   </data>
   <data name="Rectangle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 251</value>
+    <value>744, 252</value>
   </data>
   <data name="Rectangle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>65, 58</value>
   </data>
   <data name="Rectangle.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -458,10 +522,10 @@
     <value>NoControl</value>
   </data>
   <data name="Line.Location" type="System.Drawing.Point, System.Drawing">
-    <value>824, 123</value>
+    <value>815, 123</value>
   </data>
   <data name="Line.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>64, 58</value>
   </data>
   <data name="Line.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -491,10 +555,10 @@
     <value>NoControl</value>
   </data>
   <data name="Circle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 187</value>
+    <value>744, 187</value>
   </data>
   <data name="Circle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>65, 58</value>
   </data>
   <data name="Circle.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -540,10 +604,10 @@
     <value>NoControl</value>
   </data>
   <data name="Point.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 123</value>
+    <value>744, 123</value>
   </data>
   <data name="Point.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
+    <value>65, 58</value>
   </data>
   <data name="Point.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -563,114 +627,6 @@
   <data name="&gt;&gt;Point.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="eraser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="eraser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 315</value>
-  </data>
-  <data name="eraser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
-  </data>
-  <data name="eraser.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="eraser.Text" xml:space="preserve">
-    <value>eraser</value>
-  </data>
-  <data name="&gt;&gt;eraser.Name" xml:space="preserve">
-    <value>eraser</value>
-  </data>
-  <data name="&gt;&gt;eraser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;eraser.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;eraser.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Triangle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Triangle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 315</value>
-  </data>
-  <data name="Triangle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
-  </data>
-  <data name="Triangle.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="Triangle.Text" xml:space="preserve">
-    <value>triangle</value>
-  </data>
-  <data name="&gt;&gt;Triangle.Name" xml:space="preserve">
-    <value>Triangle</value>
-  </data>
-  <data name="&gt;&gt;Triangle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Triangle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Triangle.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Square.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Square.Location" type="System.Drawing.Point, System.Drawing">
-    <value>775, 379</value>
-  </data>
-  <data name="Square.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
-  </data>
-  <data name="Square.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="Square.Text" xml:space="preserve">
-    <value>square</value>
-  </data>
-  <data name="&gt;&gt;Square.Name" xml:space="preserve">
-    <value>Square</value>
-  </data>
-  <data name="&gt;&gt;Square.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Square.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Square.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Ellipse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Ellipse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 379</value>
-  </data>
-  <data name="Ellipse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 58</value>
-  </data>
-  <data name="Ellipse.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="Ellipse.Text" xml:space="preserve">
-    <value>Ellipse</value>
-  </data>
-  <data name="&gt;&gt;Ellipse.Name" xml:space="preserve">
-    <value>Ellipse</value>
-  </data>
-  <data name="&gt;&gt;Ellipse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Ellipse.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Ellipse.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -688,6 +644,9 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>

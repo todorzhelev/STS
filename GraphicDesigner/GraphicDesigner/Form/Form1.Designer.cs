@@ -44,6 +44,10 @@
             this.line1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ellipse = new System.Windows.Forms.Button();
+            this.Square = new System.Windows.Forms.Button();
+            this.Triangle = new System.Windows.Forms.Button();
+            this.eraser = new System.Windows.Forms.Button();
             this.spline = new System.Windows.Forms.Button();
             this.bezier = new System.Windows.Forms.Button();
             this.brush = new System.Windows.Forms.Button();
@@ -51,10 +55,6 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
-            this.eraser = new System.Windows.Forms.Button();
-            this.Triangle = new System.Windows.Forms.Button();
-            this.Square = new System.Windows.Forms.Button();
-            this.Ellipse = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -150,53 +150,90 @@
             resources.ApplyResources(this.line3ToolStripMenuItem, "line3ToolStripMenuItem");
             this.line3ToolStripMenuItem.Click += new System.EventHandler(this.line3ToolStripMenuItem_Click);
             // 
+            // Ellipse
+            // 
+            this.Ellipse.Image = global::GraphicDesigner.Properties.Resources.elipse;
+            resources.ApplyResources(this.Ellipse, "Ellipse");
+            this.Ellipse.Name = "Ellipse";
+            this.Ellipse.UseVisualStyleBackColor = true;
+            this.Ellipse.Click += new System.EventHandler(this.Ellipse_Click);
+            // 
+            // Square
+            // 
+            this.Square.Image = global::GraphicDesigner.Properties.Resources.square;
+            resources.ApplyResources(this.Square, "Square");
+            this.Square.Name = "Square";
+            this.Square.UseVisualStyleBackColor = true;
+            this.Square.Click += new System.EventHandler(this.Square_Click);
+            // 
+            // Triangle
+            // 
+            resources.ApplyResources(this.Triangle, "Triangle");
+            this.Triangle.Name = "Triangle";
+            this.Triangle.UseVisualStyleBackColor = true;
+            this.Triangle.Click += new System.EventHandler(this.Triangle_Click);
+            // 
+            // eraser
+            // 
+            this.eraser.Image = global::GraphicDesigner.Properties.Resources.Eraser_512;
+            resources.ApplyResources(this.eraser, "eraser");
+            this.eraser.Name = "eraser";
+            this.eraser.UseVisualStyleBackColor = true;
+            this.eraser.Click += new System.EventHandler(this.eraser_Click);
+            // 
             // spline
             // 
+            this.spline.BackColor = System.Drawing.Color.WhiteSmoke;
             this.spline.Image = global::GraphicDesigner.Properties.Resources.spline1;
             resources.ApplyResources(this.spline, "spline");
             this.spline.Name = "spline";
-            this.spline.UseVisualStyleBackColor = true;
+            this.spline.UseVisualStyleBackColor = false;
             this.spline.Click += new System.EventHandler(this.spline_Click);
             // 
             // bezier
             // 
+            this.bezier.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.bezier, "bezier");
             this.bezier.Image = global::GraphicDesigner.Properties.Resources.bezier1;
             this.bezier.Name = "bezier";
-            this.bezier.UseVisualStyleBackColor = true;
+            this.bezier.UseVisualStyleBackColor = false;
             this.bezier.Click += new System.EventHandler(this.bezier_Click);
             // 
             // brush
             // 
+            this.brush.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.brush, "brush");
             this.brush.ContextMenuStrip = this.contextMenuStrip1;
             this.brush.Name = "brush";
-            this.brush.UseVisualStyleBackColor = true;
+            this.brush.UseVisualStyleBackColor = false;
             this.brush.Click += new System.EventHandler(this.button1_Click);
             // 
             // Rectangle
             // 
+            this.Rectangle.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.Rectangle, "Rectangle");
             this.Rectangle.Name = "Rectangle";
-            this.Rectangle.UseVisualStyleBackColor = true;
+            this.Rectangle.UseVisualStyleBackColor = false;
             this.Rectangle.Click += new System.EventHandler(this.Rectangle_Click);
             // 
             // Line
             // 
+            this.Line.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.Line, "Line");
             this.Line.Cursor = System.Windows.Forms.Cursors.Default;
             this.Line.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Line.Name = "Line";
-            this.Line.UseVisualStyleBackColor = true;
+            this.Line.UseVisualStyleBackColor = false;
             this.Line.Click += new System.EventHandler(this.Line_Click);
             // 
             // Circle
             // 
+            this.Circle.BackColor = System.Drawing.Color.WhiteSmoke;
             resources.ApplyResources(this.Circle, "Circle");
             this.Circle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Circle.Image = global::GraphicDesigner.Properties.Resources.circle;
             this.Circle.Name = "Circle";
-            this.Circle.UseVisualStyleBackColor = true;
+            this.Circle.UseVisualStyleBackColor = false;
             this.Circle.Click += new System.EventHandler(this.Circle_Click);
             // 
             // Point
@@ -207,34 +244,6 @@
             this.Point.Name = "Point";
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
-            // 
-            // eraser
-            // 
-            resources.ApplyResources(this.eraser, "eraser");
-            this.eraser.Name = "eraser";
-            this.eraser.UseVisualStyleBackColor = true;
-            this.eraser.Click += new System.EventHandler(this.eraser_Click);
-            // 
-            // Triangle
-            // 
-            resources.ApplyResources(this.Triangle, "Triangle");
-            this.Triangle.Name = "Triangle";
-            this.Triangle.UseVisualStyleBackColor = true;
-            this.Triangle.Click += new System.EventHandler(this.Triangle_Click);
-            // 
-            // Square
-            // 
-            resources.ApplyResources(this.Square, "Square");
-            this.Square.Name = "Square";
-            this.Square.UseVisualStyleBackColor = true;
-            this.Square.Click += new System.EventHandler(this.Square_Click);
-            // 
-            // Ellipse
-            // 
-            resources.ApplyResources(this.Ellipse, "Ellipse");
-            this.Ellipse.Name = "Ellipse";
-            this.Ellipse.UseVisualStyleBackColor = true;
-            this.Ellipse.Click += new System.EventHandler(this.Ellipse_Click);
             // 
             // STS
             // 
