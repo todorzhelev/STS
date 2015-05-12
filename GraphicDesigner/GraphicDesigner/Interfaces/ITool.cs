@@ -7,14 +7,15 @@ using System.Drawing;
 
 namespace GraphicDesigner
 {
-    interface IDrawable
+    interface ITool
     {
         IList<Point> GetPoints();
-
         void mouseDown(Point mouseCoords);
-        void mouseUp(Point mouseCoords);
+        void mouseUp(Point mouseCoords, ref Renderer r);
         void mouseMove(Point mouseCoords);
 
-        FigureType FigureType { get; set; }
+        Point GetCenter();
+
+        ToolType ToolType { get; set; }
     }
 }

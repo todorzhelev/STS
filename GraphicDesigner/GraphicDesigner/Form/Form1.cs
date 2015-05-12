@@ -28,6 +28,7 @@ namespace GraphicDesigner
         private InputOptions options;
 
         private IList<Point> selectedPoints;
+        private Point selectedPointsCenter;
 
         public STS()
         {
@@ -90,7 +91,7 @@ namespace GraphicDesigner
             {
                 this.options.CurrentTool.mouseUp(new Point(e.X, e.Y),ref renderer);
                 selectedPoints = this.options.CurrentTool.GetPoints();
-
+                selectedPointsCenter = this.options.CurrentTool.GetCenter();
                 //this.options.Color = Color.White;
                // renderer.Render(coords, this.options);
             }
@@ -272,7 +273,7 @@ namespace GraphicDesigner
             //Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
             Tools.Rotate r = new Tools.Rotate();
 
-            IList<Point> coords = r.GetPoints(ref selectedPoints);
+            IList<Point> coords = r.GetPoints(ref selectedPoints, selectedPointsCenter.X, selectedPointsCenter.Y);
 
             renderer.Render(coords, this.options);
         }
