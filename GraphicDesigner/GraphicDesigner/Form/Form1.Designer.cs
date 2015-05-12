@@ -44,6 +44,8 @@
             this.line1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Rotate = new System.Windows.Forms.Button();
+            this.select = new System.Windows.Forms.Button();
             this.Ellipse = new System.Windows.Forms.Button();
             this.Square = new System.Windows.Forms.Button();
             this.Triangle = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
-            this.select = new System.Windows.Forms.Button();
-            this.Rotate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +151,24 @@
             this.line3ToolStripMenuItem.Name = "line3ToolStripMenuItem";
             resources.ApplyResources(this.line3ToolStripMenuItem, "line3ToolStripMenuItem");
             this.line3ToolStripMenuItem.Click += new System.EventHandler(this.line3ToolStripMenuItem_Click);
+            // 
+            // Rotate
+            // 
+            this.Rotate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Rotate.Image = global::GraphicDesigner.Properties.Resources.rotate;
+            resources.ApplyResources(this.Rotate, "Rotate");
+            this.Rotate.Name = "Rotate";
+            this.Rotate.UseVisualStyleBackColor = false;
+            this.Rotate.Click += new System.EventHandler(this.Rotate_Click);
+            // 
+            // select
+            // 
+            this.select.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.select.Image = global::GraphicDesigner.Properties.Resources.paint;
+            resources.ApplyResources(this.select, "select");
+            this.select.Name = "select";
+            this.select.UseVisualStyleBackColor = false;
+            this.select.Click += new System.EventHandler(this.select_Click);
             // 
             // Ellipse
             // 
@@ -247,22 +265,6 @@
             this.Point.Name = "Point";
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
-            // 
-            // select
-            // 
-            this.select.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.select, "select");
-            this.select.Name = "select";
-            this.select.UseVisualStyleBackColor = false;
-            this.select.Click += new System.EventHandler(this.select_Click);
-            // 
-            // Rotate
-            // 
-            this.Rotate.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.Rotate, "Rotate");
-            this.Rotate.Name = "Rotate";
-            this.Rotate.UseVisualStyleBackColor = false;
-            this.Rotate.Click += new System.EventHandler(this.Rotate_Click);
             // 
             // STS
             // 

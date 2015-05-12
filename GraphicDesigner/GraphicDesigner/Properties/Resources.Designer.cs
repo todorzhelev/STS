@@ -143,6 +143,16 @@ namespace GraphicDesigner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paint {
+            get {
+                object obj = ResourceManager.GetObject("paint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rectangle {
             get {
                 object obj = ResourceManager.GetObject("Rectangle", resourceCulture);
@@ -156,6 +166,16 @@ namespace GraphicDesigner.Properties {
         internal static System.Drawing.Bitmap Rectangle1 {
             get {
                 object obj = ResourceManager.GetObject("Rectangle1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rotate {
+            get {
+                object obj = ResourceManager.GetObject("rotate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

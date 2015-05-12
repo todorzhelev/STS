@@ -261,6 +261,54 @@
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Rotate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Rotate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>814, 443</value>
+  </data>
+  <data name="Rotate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="Rotate.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;Rotate.Name" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="&gt;&gt;Rotate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rotate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Rotate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="select.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="select.Location" type="System.Drawing.Point, System.Drawing">
+    <value>744, 443</value>
+  </data>
+  <data name="select.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 58</value>
+  </data>
+  <data name="select.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;select.Name" xml:space="preserve">
+    <value>select</value>
+  </data>
+  <data name="&gt;&gt;select.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;select.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;select.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="Ellipse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -617,60 +665,6 @@
   </data>
   <data name="&gt;&gt;Point.ZOrder" xml:space="preserve">
     <value>13</value>
-  </data>
-  <data name="select.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="select.Location" type="System.Drawing.Point, System.Drawing">
-    <value>744, 443</value>
-  </data>
-  <data name="select.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 58</value>
-  </data>
-  <data name="select.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="select.Text" xml:space="preserve">
-    <value>select</value>
-  </data>
-  <data name="&gt;&gt;select.Name" xml:space="preserve">
-    <value>select</value>
-  </data>
-  <data name="&gt;&gt;select.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;select.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;select.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Rotate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Rotate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>814, 443</value>
-  </data>
-  <data name="Rotate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 58</value>
-  </data>
-  <data name="Rotate.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="Rotate.Text" xml:space="preserve">
-    <value>Rotate</value>
-  </data>
-  <data name="&gt;&gt;Rotate.Name" xml:space="preserve">
-    <value>Rotate</value>
-  </data>
-  <data name="&gt;&gt;Rotate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Rotate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Rotate.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
