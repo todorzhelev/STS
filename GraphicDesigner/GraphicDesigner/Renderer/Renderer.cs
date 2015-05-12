@@ -43,7 +43,14 @@ namespace GraphicDesigner
             this.pastDrawing.Level = (int)LayerLevel.Last;
 
             // create current
-            this.currentDrawing = this.GetNewCurrentLayer(points);
+            if (this.pastDrawing != null)
+            {
+                this.currentDrawing = this.pastDrawing.Clone();
+            }
+            else
+            {
+                this.currentDrawing = this.field.Clone();
+            }
 
             foreach (Point p in points)
             {
