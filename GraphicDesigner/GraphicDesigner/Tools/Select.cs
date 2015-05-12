@@ -60,7 +60,7 @@ namespace GraphicDesigner.Tools
 
         public Point GetCenter()
         {
-            return new Point(Math.Abs(end.X - start.X) / 2, Math.Abs(end.Y - start.Y) / 2);
+            return new Point(start.X+Math.Abs(end.X - start.X) / 2, start.Y+Math.Abs(end.Y - start.Y) / 2);
         }
 
         private ToolType type;

@@ -13,24 +13,32 @@ namespace GraphicDesigner.Tools
         {
 
         }
-        public IList<Point> GetPoints(ref IList<Point> selectedPoints,int offsetX, int offsetY)
+        public IList<Point> GetPoints(ref IList<Point> selectedPoints,int cX, int cY)
         {
-            //double[,] mat = new double[2, 2];
-            //mat[0, 0] = Math.Cos(10);
-            //mat[0, 1] = Math.Sin(10);
-            //mat[1, 0] = -Math.Sin(10);
-            //mat[0, 1] = Math.Cos(10);
             var points = new List<Point>();
-            double angle = 10;
+            double angle = 50;
+
+
             for (int i = 0; i < selectedPoints.Count; i++)
             {
                 Point p = new Point();
-               // double resultx = selectedPoints[i].X * Math.Cos(angle) - selectedPoints[i].Y * Math.Sin(angle);
-                //p.X = (int)(1 * Math.Cos(angle) - 2 * Math.Sin(angle));
-                //p.Y = (int)(1 * Math.Sin(angle) + 2 * Math.Cos(angle));
-                p.X = (int)(selectedPoints[i].X * Math.Cos(angle) - selectedPoints[i].Y * Math.Sin(angle)+offsetX);
-                p.Y = (int)(selectedPoints[i].X * Math.Sin(angle) + selectedPoints[i].Y * Math.Cos(angle)+offsetY);
+                p.X = selectedPoints[i].X - cX;
+                p.Y = selectedPoints[i].Y - cY;
                 points.Add(p);
+            }
+
+            for (int i = 0; i < points.Count; i++)
+            {
+                int x = (int)(points[i].X * Math.Cos(angle) - points[i].Y * Math.Sin(angle));
+                int y = (int)(points[i].X * Math.Sin(angle) + points[i].Y * Math.Cos(angle));
+                points[i] = new Point(x, y);
+            }
+
+            for (int i = 0; i < points.Count; i++)
+            {
+                int x = points[i].X + cX;
+                int y = points[i].Y + cY;
+                points[i] = new Point(x,y);
             }
 
             return points;
