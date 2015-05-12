@@ -18,6 +18,7 @@ namespace GraphicDesigner
         private const Utilities.BrushSize DefaultBrushSize = Utilities.BrushSize.Small;
         private static readonly Color DefaultColor = Color.Blue;
         private const FigureType DefaultFigureType = FigureType.Pencil;
+        private const ToolType DefaultToolType = ToolType.Unknown;
 
         private  InputOptions prevOptions;
         private bool IsEraserUsed;
@@ -25,6 +26,8 @@ namespace GraphicDesigner
         private Graphics graphics;
         private Renderer renderer;
         private InputOptions options;
+
+        private IList<Point> selectedPoints;
 
         public STS()
         {
@@ -35,10 +38,11 @@ namespace GraphicDesigner
             this.MouseMove += this.mouseMove;
             this.renderer = new Renderer();
             this.renderer.SetGraphics(ref graphics);
-            this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
+            this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.Cursor = Cursors.Default;
-            this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize);
+            this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.IsEraserUsed = false;
+            selectedPoints = new List<Point>();
         }
 
         private void ApplyPreviousOptions()
@@ -50,22 +54,57 @@ namespace GraphicDesigner
             }
 
             this.IsEraserUsed = false;
+            this.options.CurrentTool.ToolType = ToolType.Unknown;
 
             this.renderer.SaveCurrentDrawingToField();
         }
 
         private void mouseDown(object sender, MouseEventArgs e)
         {
-            this.options.CurrentFigure.mouseDown(new Point(e.X, e.Y));
+            if (this.options.CurrentTool.ToolType == ToolType.Unknown)
+            {
+                this.options.CurrentFigure.mouseDown(new Point(e.X, e.Y));
+            }
+            else
+            {
+                this.options.CurrentTool.mouseDown(new Point(e.X, e.Y));
+            }
         }
 
         private void mouseUp(object sender, MouseEventArgs e)
         {
-            this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
+            if (this.options.CurrentTool.ToolType == ToolType.Unknown )
+            {
+                this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
 
-            IList<Point> coords = this.options.CurrentFigure.GetPoints();
+                IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
-            renderer.Render(coords, this.options);
+                if (this.options.FigureType == FigureType.BezierCurve)
+                {
+                    renderer.RemovePastLayer();
+                }
+
+                renderer.Render(coords, this.options);
+            }
+            else if( this.options.CurrentTool.ToolType == ToolType.Select)
+            {
+                this.options.CurrentTool.mouseUp(new Point(e.X, e.Y),ref renderer);
+                selectedPoints = this.options.CurrentTool.GetPoints();
+
+                //this.options.Color = Color.White;
+               // renderer.Render(coords, this.options);
+            }
+            //else if( this.options.CurrentTool.ToolType == ToolType.Rotate)
+            //{
+            //    this.options.CurrentTool.mouseUp(new Point(e.X, e.Y),ref renderer);
+
+            //    Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
+
+            //    IList<Point> coords = r.GetPoints(ref selectedPoints);
+
+            //    renderer.Render(coords, this.options);
+            //}
+           
         }
 
         private void mouseMove(object sender, MouseEventArgs e)
@@ -217,6 +256,25 @@ namespace GraphicDesigner
         {
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.Ellipse;
+        }
+
+        private void select_Click(object sender, EventArgs e)
+        {
+            this.options.CurrentTool.ToolType = ToolType.Select;
+        }
+
+
+        private void Rotate_Click(object sender, EventArgs e)
+        {
+            this.options.CurrentTool.ToolType = ToolType.Rotate;
+           // this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
+
+            //Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
+            Tools.Rotate r = new Tools.Rotate();
+
+            IList<Point> coords = r.GetPoints(ref selectedPoints);
+
+            renderer.Render(coords, this.options);
         }
        
     }

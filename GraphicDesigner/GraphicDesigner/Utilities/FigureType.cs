@@ -20,4 +20,11 @@ namespace GraphicDesigner
         Triangle,
         Square
     }
+
+    enum ToolType
+    {
+        Unknown,
+        Select,
+        Rotate
+    }
 }

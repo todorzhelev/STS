@@ -55,6 +55,8 @@
             this.Line = new System.Windows.Forms.Button();
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
+            this.select = new System.Windows.Forms.Button();
+            this.Rotate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -245,12 +247,30 @@
             this.Point.UseVisualStyleBackColor = false;
             this.Point.Click += new System.EventHandler(this.Point_Click);
             // 
+            // select
+            // 
+            this.select.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.select, "select");
+            this.select.Name = "select";
+            this.select.UseVisualStyleBackColor = false;
+            this.select.Click += new System.EventHandler(this.select_Click);
+            // 
+            // Rotate
+            // 
+            this.Rotate.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.Rotate, "Rotate");
+            this.Rotate.Name = "Rotate";
+            this.Rotate.UseVisualStyleBackColor = false;
+            this.Rotate.Click += new System.EventHandler(this.Rotate_Click);
+            // 
             // STS
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Rotate);
+            this.Controls.Add(this.select);
             this.Controls.Add(this.Ellipse);
             this.Controls.Add(this.Square);
             this.Controls.Add(this.Triangle);
@@ -304,6 +324,8 @@
         private System.Windows.Forms.Button Triangle;
         private System.Windows.Forms.Button Square;
         private System.Windows.Forms.Button Ellipse;
+        private System.Windows.Forms.Button select;
+        private System.Windows.Forms.Button Rotate;
 
      
        // private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

@@ -55,6 +55,8 @@
     <Compile Include="Factories\DrawableFactory.cs" />
     <Compile Include="Drawables\Curve.cs" />
     <Compile Include="Drawables\Circle.cs" />
+    <Compile Include="Factories\ToolFactory.cs" />
+    <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +64,8 @@
     </Compile>
     <Compile Include="Renderer\ColorMatrix.cs" />
     <Compile Include="Renderer\Layer.cs" />
+    <Compile Include="Tools\Rotate.cs" />
+    <Compile Include="Tools\Select.cs" />
     <Compile Include="Utilities\BrushSize.cs" />
     <Compile Include="Utilities\FigureType.cs" />
     <Compile Include="Form\Form1.cs">
