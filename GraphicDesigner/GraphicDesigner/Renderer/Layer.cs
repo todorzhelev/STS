@@ -25,5 +25,27 @@ namespace GraphicDesigner
             this.Level = level;
             this.colorMatrix = new ColorMatrix(startX, startY, endX, endY);
         }
+
+        public int Width
+        {
+            get
+            {
+                return this.EndX - this.StartX + 1;
+            }
+        }
+
+        public int Heigth
+        {
+            get
+            {
+                return this.EndY - this.StartY + 1;
+            }
+        }
+
+        public Layer Clone()
+        {
+            Layer clone = new Layer(this.StartX, this.StartY, this.EndX, this.EndY, this.Level);
+            return clone;
+        }
     }
 }

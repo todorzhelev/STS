@@ -28,6 +28,14 @@ namespace GraphicDesigner
             this.Heigth = endY - startY + 1;
 
             this.matrix = new Color[this.Width, this.Heigth];
+
+            for (int i = 0; i < this.Width; i++)
+            {
+                for (int j = 0; j < this.Heigth; j++)
+                {
+                    this.matrix[i, j] = Color.White;
+                }
+            }
         }
 
         public Color Get(int x, int y)
@@ -70,6 +78,12 @@ namespace GraphicDesigner
                     }
                 }
             }
+        }
+
+        public ColorMatrix Clone()
+        {
+            ColorMatrix clone = new ColorMatrix(this.StartX, this.StartY, this.EndX, this.EndY);
+            return clone;
         }
     }
 }
