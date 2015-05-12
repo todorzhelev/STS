@@ -468,15 +468,6 @@
   <data name="&gt;&gt;brush.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="Rectangle.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAJNJREFUWEftzjEOhEAUw1Duf+mhcRoUoT/FLiD5lWniY72SWTvM2vGFrONpdJg1
-        QodZI3TcZ7H+Ek/BalbHU7Ca1fEUrGZ1PAWrWR1PwWpWx1OwmtXxFKxmdTwFq1kdT8FqVsdTsJrV8RSs
-        ZnU8BatZHU/BalbHU7Ca1fEUrPdZ/0eHWSN0mDVCxyXrPczaYdbcWifqfchRpL8yAQAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
   <data name="Rectangle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>

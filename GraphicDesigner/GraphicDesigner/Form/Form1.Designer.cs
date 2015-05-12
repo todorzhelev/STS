@@ -162,7 +162,7 @@
             // 
             // Square
             // 
-            this.Square.Image = global::GraphicDesigner.Properties.Resources.square;
+            this.Square.Image = global::GraphicDesigner.Properties.Resources.Rectangle1;
             resources.ApplyResources(this.Square, "Square");
             this.Square.Name = "Square";
             this.Square.UseVisualStyleBackColor = true;
@@ -213,6 +213,7 @@
             // Rectangle
             // 
             this.Rectangle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Rectangle.Image = global::GraphicDesigner.Properties.Resources.square2;
             resources.ApplyResources(this.Rectangle, "Rectangle");
             this.Rectangle.Name = "Rectangle";
             this.Rectangle.UseVisualStyleBackColor = false;
