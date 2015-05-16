@@ -17,40 +17,48 @@ namespace GraphicDesigner
         {
             this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
             //this.pastDrawing = this.field.Clone();
-            this.currentDrawing = this.field.Clone();
+            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
         }
 
         public void Render(IList<Point> points, InputOptions options)
         {
-            if (options.FigureType == FigureType.BezierCurve)
-            {
-                this.RemovePastLayer();
-            }
 
             if (points.Count < 1)
             {
                 return;
             }
 
+            Layer pastCopy = null;
+
             // copy past to field
             if (this.pastDrawing != null)
             {
+                //this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
                 this.field.colorMatrix.SetMultiple(this.pastDrawing.colorMatrix);
+                pastCopy = this.pastDrawing.Clone();
             }
 
             // copy current to past
             this.pastDrawing = this.currentDrawing.Clone();
             this.pastDrawing.Level = (int)LayerLevel.Last;
 
-            // create current
-            if (this.pastDrawing != null)
+
+            if (options.FigureType == FigureType.BezierCurve || options.FigureType == FigureType.SplineCurve)
             {
-                this.currentDrawing = this.pastDrawing.Clone();
+                this.RemoveLayer(ref this.currentDrawing);
+            }
+            
+
+            // create current
+            if (pastCopy != null)
+            {
+                this.currentDrawing = pastCopy;
             }
             else
             {
                 this.currentDrawing = this.field.Clone();
             }
+            this.currentDrawing.Level = (int)LayerLevel.Current;
 
             foreach (Point p in points)
             {
@@ -61,38 +69,75 @@ namespace GraphicDesigner
                     for (int j = p.Y; j < p.Y + size; j++)
                     {
                         this.currentDrawing.colorMatrix.Set(i, j, options.Color);
-                        this.DrawPoint(i, j, options.Color);
+                        
                     }
-                } 
+                }
+                this.DrawPoint(p.X, p.Y, options.Color, size);
+            }
+
+            for (int i = 0; i < points.Count - 1; i++)
+            {
+                var line = new Drawables.Line();
+                line.GeneratePoints(points[i], points[i + 1]);
+                var linePoints = line.GetPoints();
+                foreach (var p in linePoints)
+                {
+                    int size = (int)options.BrushSize;
+
+                    for (int k = p.X; k < p.X + size; k++)
+                    {
+                        for (int j = p.Y; j < p.Y + size; j++)
+                        {
+                            this.currentDrawing.colorMatrix.Set(k, j, options.Color);
+
+                        }
+                    }
+                    this.DrawPoint(p.X, p.Y, options.Color, size);
+                }
             }
         }
 
         public void RemovePastLayer()
         {
-            if (this.pastDrawing == null)
+            this.RemoveLayer(ref this.pastDrawing);
+        }
+
+        private void RemoveLayer(ref Layer layer)
+        {
+            if (layer == null)
             {
                 return;
             }
 
-            for (int i = this.pastDrawing.colorMatrix.StartX; i <= this.pastDrawing.colorMatrix.EndX; i++)
+            for (int i = layer.colorMatrix.StartX; i <= layer.colorMatrix.EndX; i++)
             {
-                for (int j = this.pastDrawing.colorMatrix.StartY; j <= this.pastDrawing.colorMatrix.EndY; j++)
+                for (int j = layer.colorMatrix.StartY; j <= layer.colorMatrix.EndY; j++)
                 {
-                    if (this.field.colorMatrix.Get(i, j) != this.pastDrawing.colorMatrix.Get(i, j))
+                    if (this.field.colorMatrix.Get(i, j) != layer.colorMatrix.Get(i, j))
                     {
                         var color = this.field.colorMatrix.Get(i, j);
-                        this.DrawPoint(i, j, color);
+                        this.DrawPoint(i, j, color, 1);
                     }
                 }
             }
 
-            this.pastDrawing = null;
-
+            layer = null;
         }
 
         public void SaveCurrentDrawingToField()
         {
-            this.field = this.currentDrawing.Clone();
+            if (this.pastDrawing != null)
+            {
+                this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
+                this.field.colorMatrix.SetMultiple(this.pastDrawing.colorMatrix);
+                this.pastDrawing = null;
+                this.currentDrawing.colorMatrix.SetMultiple(this.field.colorMatrix);
+            }
+            else
+            {
+                this.field.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
+            }
+            
         }
 
         public void SetGraphics(ref Graphics graphics)
@@ -101,10 +146,10 @@ namespace GraphicDesigner
         }
 
 
-        private void DrawPoint(int x, int y, Color color)
+        private void DrawPoint(int x, int y, Color color, int size)
         {
             var brush = new SolidBrush(color);
-            graphics.FillRectangle(brush, x, y, 1, 1);
+            graphics.FillRectangle(brush, x, y, size, size);
 
             //another way to draw points, which is slower
             //Bitmap bm = new Bitmap(1, 1);

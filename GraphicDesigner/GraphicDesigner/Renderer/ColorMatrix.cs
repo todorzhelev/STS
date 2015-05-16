@@ -74,7 +74,10 @@ namespace GraphicDesigner
                 {
                     if (i < this.EndX && j < this.EndY)
                     {
-                        this.Set(i, j, other.Get(i, j));
+                        if (this.Get(i, j) != other.Get(i, j))
+                        {
+                            this.Set(i, j, other.Get(i, j));
+                        }
                     }
                 }
             }
