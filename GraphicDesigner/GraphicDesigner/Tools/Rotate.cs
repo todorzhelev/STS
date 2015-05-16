@@ -23,8 +23,6 @@ namespace GraphicDesigner.Tools
         public IList<Point> GetPoints(ref IList<Point> selectedPoints,int cX, int cY)
         {
             var points = new List<Point>();
-            double angle = 50;
-
 
             for (int i = 0; i < selectedPoints.Count; i++)
             {
@@ -33,19 +31,22 @@ namespace GraphicDesigner.Tools
                     continue;
                 }
 
+                //translates each non-white point to the beginning of the coordinate system
                 Point p = new Point();
                 p.X = selectedPoints[i].X - cX;
                 p.Y = selectedPoints[i].Y - cY;
                 points.Add(p);
             }
 
+            //rotates each point counter-clockwise
             for (int i = 0; i < points.Count; i++)
             {
-                int x = (int)(points[i].X * Math.Cos(angle) - points[i].Y * Math.Sin(angle));
-                int y = (int)(points[i].X * Math.Sin(angle) + points[i].Y * Math.Cos(angle));
+                int x = (int)(points[i].X * Math.Cos(rotationAngle) + points[i].Y * Math.Sin(rotationAngle));
+                int y = (int)(-points[i].X * Math.Sin(rotationAngle) + points[i].Y * Math.Cos(rotationAngle));
                 points[i] = new Point(x, y);
             }
 
+            //returns back the points
             for (int i = 0; i < points.Count; i++)
             {
                 int x = points[i].X + cX;
@@ -97,11 +98,9 @@ namespace GraphicDesigner.Tools
             }
         }
 
-        //private 
         private ToolType type;
-        // public ToolType type;
         private Point start, end;
-        private Point p1, p2, p3, p4;
         private Renderer renderer;
+        private static int rotationAngle = 45;
     }
 }
