@@ -122,7 +122,7 @@ namespace GraphicDesigner
         
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            graphics.Clear(Color.White);
+            this.renderer.ClearGraphics();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)

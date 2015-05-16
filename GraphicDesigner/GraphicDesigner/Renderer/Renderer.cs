@@ -15,9 +15,8 @@ namespace GraphicDesigner
 
         public Renderer()
         {
-            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
-            //this.pastDrawing = this.field.Clone();
-            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
+            this.ClearGraphics();
+
             this.connectPoints = true;
         }
 
@@ -149,7 +148,6 @@ namespace GraphicDesigner
             this.graphics = graphics;
         }
 
-
         private void DrawPoint(int x, int y, Color color, int size)
         {
             var brush = new SolidBrush(color);
@@ -194,6 +192,14 @@ namespace GraphicDesigner
             //Layer currLayer = new Layer(minX, minY, maxX, maxY, (int)LayerLevel.Current);
             Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
             return currLayer;
+        }
+
+        public void ClearGraphics()
+        {
+            graphics.Clear(Color.White);
+
+            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
+            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
         }
 
         private Graphics graphics;
