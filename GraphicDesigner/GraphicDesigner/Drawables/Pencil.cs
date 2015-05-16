@@ -12,6 +12,8 @@ namespace GraphicDesigner.Drawables
         public Pencil()
         {
             points = new List<Point>();
+            this.NeedsConnectPoints = false;
+            this.NeedsRemovePastLayer = false;
         }
 
         public IList<Point> GetPoints()
@@ -64,6 +66,9 @@ namespace GraphicDesigner.Drawables
         private IList<Point> points;
         private bool isMouseDown;
         private int oldX, oldY;
+        public bool NeedsRemovePastLayer { get; private set; }
+
+        public bool NeedsConnectPoints { get; private set; }
     }
 }
 

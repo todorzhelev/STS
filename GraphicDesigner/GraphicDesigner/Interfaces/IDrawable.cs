@@ -16,5 +16,8 @@ namespace GraphicDesigner
         void mouseMove(Point mouseCoords);
 
         FigureType FigureType { get; set; }
+
+        bool NeedsRemovePastLayer { get; }
+        bool NeedsConnectPoints { get; }
     }
 }

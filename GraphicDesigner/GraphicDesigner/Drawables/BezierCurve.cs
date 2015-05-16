@@ -12,6 +12,9 @@ namespace GraphicDesigner.Drawables
         public BezierCurve()
         {
             this.ControlPoints = new List<Point>();
+            this.FigureType = FigureType.BezierCurve;
+            this.NeedsConnectPoints = true;
+            this.NeedsRemovePastLayer = true;
         }
 
         private IList<Point> ControlPoints { get; set; }

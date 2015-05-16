@@ -9,7 +9,13 @@ namespace GraphicDesigner.Drawables
 {
     class Triangle : IDrawable
     {
-         public IList<Point> GetPoints()
+        public Triangle()
+        {
+            this.NeedsConnectPoints = false;
+            this.NeedsRemovePastLayer = false;
+        }
+
+        public IList<Point> GetPoints()
         {
             var points = GeneratePoints();
 
@@ -74,7 +80,9 @@ namespace GraphicDesigner.Drawables
 
         private Point start,end;
         private Point p1, p2, p3, p4;
-    
-    
+
+        public bool NeedsRemovePastLayer { get; private set; }
+
+        public bool NeedsConnectPoints { get; private set; }
     }
 }

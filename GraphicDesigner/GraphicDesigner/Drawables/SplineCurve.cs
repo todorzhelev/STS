@@ -18,6 +18,9 @@ namespace GraphicDesigner.Drawables
             ControlPoints = new List<Point>();
             nodes = new List<double>();
             this.curvePower = 3;
+
+            this.NeedsConnectPoints = true;
+            this.NeedsRemovePastLayer = true;
         }
 
         public override IList<System.Drawing.Point> GetPoints()

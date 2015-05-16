@@ -12,6 +12,8 @@ namespace GraphicDesigner.Drawables
         public Eraser()
         {
             points = new List<Point>();
+            this.NeedsConnectPoints = false;
+            this.NeedsRemovePastLayer = false;
         }
 
         public IList<Point> GetPoints()
@@ -63,5 +65,9 @@ namespace GraphicDesigner.Drawables
         private IList<Point> points;
         private bool isMouseDown;
         private Point oldPoint;
+
+        public bool NeedsRemovePastLayer { get; private set; }
+
+        public bool NeedsConnectPoints { get; private set; }
     }
 }

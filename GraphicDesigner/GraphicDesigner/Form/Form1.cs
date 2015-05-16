@@ -80,7 +80,7 @@ namespace GraphicDesigner
 
                 IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
-                if (this.options.FigureType == FigureType.BezierCurve || options.FigureType == FigureType.SplineCurve)
+                if (this.options.CurrentFigure.NeedsRemovePastLayer)
                 {
                     renderer.RemovePastLayer();
                 }

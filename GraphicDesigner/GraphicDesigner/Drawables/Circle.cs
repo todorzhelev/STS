@@ -12,6 +12,8 @@ namespace GraphicDesigner.Drawables
         public Circle()
         {
             points = new List<Point>();
+            this.NeedsConnectPoints = false;
+            this.NeedsRemovePastLayer = false;
         }
 
         public void mouseDown(Point mouseCoords)
@@ -61,5 +63,9 @@ namespace GraphicDesigner.Drawables
 
         private Point center;
         private int radius;
+
+        public bool NeedsRemovePastLayer { get; private set; }
+
+        public bool NeedsConnectPoints { get; private set; }
     }
 }

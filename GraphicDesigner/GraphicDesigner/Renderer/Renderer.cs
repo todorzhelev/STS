@@ -43,11 +43,11 @@ namespace GraphicDesigner
             this.pastDrawing.Level = (int)LayerLevel.Last;
 
 
-            if (options.FigureType == FigureType.BezierCurve || options.FigureType == FigureType.SplineCurve)
+            if (options.CurrentFigure.NeedsRemovePastLayer)
             {
                 this.RemoveLayer(ref this.currentDrawing);
             }
-            
+
 
             // create current
             if (pastCopy != null)
@@ -69,30 +69,33 @@ namespace GraphicDesigner
                     for (int j = p.Y; j < p.Y + size; j++)
                     {
                         this.currentDrawing.colorMatrix.Set(i, j, options.Color);
-                        
+
                     }
                 }
                 this.DrawPoint(p.X, p.Y, options.Color, size);
             }
 
-            for (int i = 0; i < points.Count - 1; i++)
+            if (options.CurrentFigure.NeedsConnectPoints)
             {
-                var line = new Drawables.Line();
-                line.GeneratePoints(points[i], points[i + 1]);
-                var linePoints = line.GetPoints();
-                foreach (var p in linePoints)
+                for (int i = 0; i < points.Count - 1; i++)
                 {
-                    int size = (int)options.BrushSize;
-
-                    for (int k = p.X; k < p.X + size; k++)
+                    var line = new Drawables.Line();
+                    line.GeneratePoints(points[i], points[i + 1]);
+                    var linePoints = line.GetPoints();
+                    foreach (var p in linePoints)
                     {
-                        for (int j = p.Y; j < p.Y + size; j++)
-                        {
-                            this.currentDrawing.colorMatrix.Set(k, j, options.Color);
+                        int size = (int)options.BrushSize;
 
+                        for (int k = p.X; k < p.X + size; k++)
+                        {
+                            for (int j = p.Y; j < p.Y + size; j++)
+                            {
+                                this.currentDrawing.colorMatrix.Set(k, j, options.Color);
+
+                            }
                         }
+                        this.DrawPoint(p.X, p.Y, options.Color, size);
                     }
-                    this.DrawPoint(p.X, p.Y, options.Color, size);
                 }
             }
         }
@@ -137,7 +140,7 @@ namespace GraphicDesigner
             {
                 this.field.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
             }
-            
+
         }
 
         public void SetGraphics(ref Graphics graphics)

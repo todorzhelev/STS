@@ -18,5 +18,9 @@ namespace GraphicDesigner.Drawables
         public abstract void mouseMove(Point mouseCoords);
 
         public FigureType FigureType { get; set; }
+
+        public bool NeedsRemovePastLayer { get; protected set; }
+
+        public bool NeedsConnectPoints { get; protected set; }
     }
 }
