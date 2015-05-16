@@ -274,8 +274,9 @@ namespace GraphicDesigner
             Tools.Rotate r = new Tools.Rotate(ref renderer);
 
             IList<Point> coords = r.GetPoints(ref selectedPoints, selectedPointsCenter.X, selectedPointsCenter.Y);
-
+            renderer.connectPoints = false;
             renderer.Render(coords, this.options);
+            renderer.connectPoints = true;
         }
        
     }

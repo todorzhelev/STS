@@ -18,6 +18,7 @@ namespace GraphicDesigner
             this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
             //this.pastDrawing = this.field.Clone();
             this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
+            this.connectPoints = true;
         }
 
         public void Render(IList<Point> points, InputOptions options)
@@ -75,7 +76,7 @@ namespace GraphicDesigner
                 this.DrawPoint(p.X, p.Y, options.Color, size);
             }
 
-            if (options.CurrentFigure.NeedsConnectPoints)
+            if (this.connectPoints && options.CurrentFigure.NeedsConnectPoints)
             {
                 for (int i = 0; i < points.Count - 1; i++)
                 {
@@ -200,5 +201,6 @@ namespace GraphicDesigner
         public Layer field;
         public Layer currentDrawing;
         public Layer pastDrawing;
+        public bool connectPoints;
     }
 }
