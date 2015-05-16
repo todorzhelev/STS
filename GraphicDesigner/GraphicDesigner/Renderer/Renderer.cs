@@ -199,6 +199,7 @@ namespace GraphicDesigner
             graphics.Clear(Color.White);
 
             this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
+            this.pastDrawing = null;
             this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
         }
 
