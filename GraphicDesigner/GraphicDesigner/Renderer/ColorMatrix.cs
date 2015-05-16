@@ -16,7 +16,7 @@ namespace GraphicDesigner
         public int Width { get; private set; }
         public int Heigth { get; private set; }
 
-        public Color[,] matrix;
+        private Color[,] matrix;
 
         public ColorMatrix(int startX, int startY, int endX, int endY)
         {
