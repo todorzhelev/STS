@@ -271,7 +271,7 @@ namespace GraphicDesigner
            // this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
 
             //Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
-            Tools.Rotate r = new Tools.Rotate();
+            Tools.Rotate r = new Tools.Rotate(ref renderer);
 
             IList<Point> coords = r.GetPoints(ref selectedPoints, selectedPointsCenter.X, selectedPointsCenter.Y);
 

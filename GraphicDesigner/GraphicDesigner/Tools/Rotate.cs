@@ -9,6 +9,13 @@ namespace GraphicDesigner.Tools
 {
     class Rotate : ITool
     {
+        public Rotate()
+        {
+        }
+        public Rotate(ref Renderer renderer)
+        {
+            this.renderer = renderer;
+        }
         void setSelectedPoints(ref List<Point> sPoints)
         {
 
@@ -21,6 +28,11 @@ namespace GraphicDesigner.Tools
 
             for (int i = 0; i < selectedPoints.Count; i++)
             {
+                if( this.renderer.currentDrawing.colorMatrix.matrix[selectedPoints[i].X,selectedPoints[i].Y] == Color.White)
+                {
+                    continue;
+                }
+
                 Point p = new Point();
                 p.X = selectedPoints[i].X - cX;
                 p.Y = selectedPoints[i].Y - cY;
@@ -90,5 +102,6 @@ namespace GraphicDesigner.Tools
         // public ToolType type;
         private Point start, end;
         private Point p1, p2, p3, p4;
+        private Renderer renderer;
     }
 }
