@@ -11,7 +11,7 @@ namespace GraphicDesigner.Drawables
     {
         public Ellipse()
         {
-            this.NeedsConnectPoints = false;
+            this.NeedsConnectPoints = true;
             this.NeedsRemovePastLayer = false;
         }
 
@@ -41,54 +41,50 @@ namespace GraphicDesigner.Drawables
 
             int x1 = p1.X;
             int x2 = p2.X;
-            int sign = 1;
             if( p1.X > p2.X)
             {
-               // sign = -1;
                 Utilities.Misc.Swap(ref x1, ref x2);
             }
-            for (int i = x1; i < x2; i+=sign )
-            {
-                Point p3 = new Point();
-                p3.X = i;
-                p3.Y = EllipseEquation(i, 1, a, b,center);
-                points.Add(p3);
 
-                Point p4 = new Point();
-                p4.X = i;
-                p4.Y = EllipseEquation(i, -1, a, b, center);
-                points.Add(p4);
+            //draws the upper part of the ellipse
+            for (int i = x1; i <= x2; i++ )
+            {
+                Point p = new Point();
+                p.X = i;
+                p.Y = EllipseEquation(i, -1, a, b,center);
+                points.Add(p); 
             }
 
+            Point firstPoint = points.First();
+
+            //draws the lower part of the ellipse
+            for (int i = x2-1; i >= x1; i--)
+            {
+                Point p = new Point();
+                p.X = i;
+                p.Y = EllipseEquation(i, 1, a, b, center);
+                points.Add(p);
+            }
 
             if (start.X == end.X || start.Y == end.Y)
             {
                 return points;
             }
-
-            //AddLinePoints(p1, p4, ref points);
-            //AddLinePoints(p4, p2, ref points);
-            //AddLinePoints(p2, p3, ref points);
-            //AddLinePoints(p3, p1, ref points);
-
             return points;
         }
 
         public int EllipseEquation(int x, int sign, float a, float b,Point center)
         {
             double result = 1 - ((x - center.X) * (x - center.X)) / (a * a);
+            //preventing negative values for sqrt
+            if(result < 0)
+            {
+                result = 0;
+            }
             int y = (int)(sign * b * Math.Sqrt(result) + center.Y);
             return y;
         }
-        public void AddLinePoints(Point p1, Point p2, ref List<Point> points)
-        {
-            Line l = new Line();
-            l.GeneratePoints(p1, p2);
-            for (int i = 0; i < l.GetPoints().Count; i++)
-            {
-                points.Add(l.GetPoints()[i]);
-            }
-        }
+
         public void mouseUp(Point mouseCoords)
         {
             end = mouseCoords;
