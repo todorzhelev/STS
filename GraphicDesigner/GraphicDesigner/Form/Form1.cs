@@ -38,7 +38,6 @@ namespace GraphicDesigner
             this.MouseUp += this.mouseUp;
             this.MouseMove += this.mouseMove;
             this.renderer = new Renderer(ref graphics);
-            this.renderer.SetGraphics(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.Cursor = Cursors.Default;
             this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);

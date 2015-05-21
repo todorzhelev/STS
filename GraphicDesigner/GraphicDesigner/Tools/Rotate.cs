@@ -26,7 +26,7 @@ namespace GraphicDesigner.Tools
 
             for (int i = 0; i < selectedPoints.Count; i++)
             {
-                if( this.renderer.currentDrawing.colorMatrix.Get(selectedPoints[i].X,selectedPoints[i].Y) == Color.White)
+                if( this.renderer.currentDrawing.ColorMatrix.Get(selectedPoints[i].X,selectedPoints[i].Y) == Color.White)
                 {
                     continue;
                 }
