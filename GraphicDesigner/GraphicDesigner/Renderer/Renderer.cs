@@ -170,36 +170,36 @@ namespace GraphicDesigner
 
         private Layer GetNewCurrentLayer(IList<Point> points)
         {
-            //var maxX = 0;
-            //var minX = formWidth;
-            //var maxY = 0;
-            //var minY = formHeight;
+            var maxX = 0;
+            var minX = FormWidth;
+            var maxY = 0;
+            var minY = FormHeight;
 
-            //foreach (Point p in points)
-            //{
-            //    if (p.X > maxX)
-            //    {
-            //        maxX = p.X;
-            //    }
+            foreach (Point p in points)
+            {
+                if (p.X > maxX)
+                {
+                    maxX = p.X;
+                }
 
-            //    if (p.X < minX)
-            //    {
-            //        minX = p.X;
-            //    }
+                if (p.X < minX)
+                {
+                    minX = p.X;
+                }
 
-            //    if (p.Y > maxY)
-            //    {
-            //        maxY = p.Y;
-            //    }
+                if (p.Y > maxY)
+                {
+                    maxY = p.Y;
+                }
 
-            //    if (p.Y < minY)
-            //    {
-            //        minY = p.Y;
-            //    }
-            //}
+                if (p.Y < minY)
+                {
+                    minY = p.Y;
+                }
+            }
 
-            //Layer currLayer = new Layer(minX, minY, maxX, maxY, (int)LayerLevel.Current);
-            Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
+            Layer currLayer = new Layer(minX, minY, maxX, maxY, (int)LayerLevel.Current);
+            //Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
             return currLayer;
         }
 
