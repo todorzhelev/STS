@@ -13,8 +13,9 @@ namespace GraphicDesigner
         private const int FormWidth = 900;
         private const int FormHeight = 700;
 
-        public Renderer()
+        public Renderer(ref Graphics graphics)
         {
+            this.graphics = graphics;
             this.ClearGraphics();
 
             this.connectPoints = true;
