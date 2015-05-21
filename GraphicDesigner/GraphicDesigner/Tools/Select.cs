@@ -66,6 +66,5 @@ namespace GraphicDesigner.Tools
         private ToolType type;
        // public ToolType type;
         private Point start,end;
-        private Point p1, p2, p3, p4;
     }
 }

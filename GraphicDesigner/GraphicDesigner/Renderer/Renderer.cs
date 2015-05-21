@@ -13,6 +13,10 @@ namespace GraphicDesigner
         private const int FormWidth = 900;
         private const int FormHeight = 700;
 
+        public Layer field;
+        public Layer currentDrawing;
+        public Layer pastDrawing;
+
         public Renderer(ref Graphics graphics)
         {
             this.graphics = graphics;
@@ -35,7 +39,7 @@ namespace GraphicDesigner
             if (this.pastDrawing != null)
             {
                 //this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
-                this.field.colorMatrix.SetMultiple(this.pastDrawing.colorMatrix);
+                this.field.ColorMatrix.SetMultiple(this.pastDrawing.ColorMatrix);
                 pastCopy = this.pastDrawing.Clone();
             }
 
@@ -69,7 +73,7 @@ namespace GraphicDesigner
                 {
                     for (int j = p.Y; j < p.Y + size; j++)
                     {
-                        this.currentDrawing.colorMatrix.Set(i, j, options.Color);
+                        this.currentDrawing.ColorMatrix.Set(i, j, options.Color);
 
                     }
                 }
@@ -91,7 +95,7 @@ namespace GraphicDesigner
                         {
                             for (int j = p.Y; j < p.Y + size; j++)
                             {
-                                this.currentDrawing.colorMatrix.Set(k, j, options.Color);
+                                this.currentDrawing.ColorMatrix.Set(k, j, options.Color);
 
                             }
                         }
@@ -101,52 +105,34 @@ namespace GraphicDesigner
             }
         }
 
-        public void RemovePastLayer()
+        public void ClearGraphics()
         {
-            this.RemoveLayer(ref this.pastDrawing);
-        }
+            graphics.Clear(Color.White);
 
-        private void RemoveLayer(ref Layer layer)
-        {
-            if (layer == null)
-            {
-                return;
-            }
-
-            for (int i = layer.colorMatrix.StartX; i <= layer.colorMatrix.EndX; i++)
-            {
-                for (int j = layer.colorMatrix.StartY; j <= layer.colorMatrix.EndY; j++)
-                {
-                    if (this.field.colorMatrix.Get(i, j) != layer.colorMatrix.Get(i, j))
-                    {
-                        var color = this.field.colorMatrix.Get(i, j);
-                        this.DrawPoint(i, j, color, 1);
-                    }
-                }
-            }
-
-            layer = null;
+            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
+            this.pastDrawing = null;
+            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
         }
 
         public void SaveCurrentDrawingToField()
         {
             if (this.pastDrawing != null)
             {
-                this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
-                this.field.colorMatrix.SetMultiple(this.pastDrawing.colorMatrix);
+                this.pastDrawing.ColorMatrix.SetMultiple(this.currentDrawing.ColorMatrix);
+                this.field.ColorMatrix.SetMultiple(this.pastDrawing.ColorMatrix);
                 this.pastDrawing = null;
-                this.currentDrawing.colorMatrix.SetMultiple(this.field.colorMatrix);
+                this.currentDrawing.ColorMatrix.SetMultiple(this.field.ColorMatrix);
             }
             else
             {
-                this.field.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
+                this.field.ColorMatrix.SetMultiple(this.currentDrawing.ColorMatrix);
             }
 
         }
 
-        public void SetGraphics(ref Graphics graphics)
+        public void RemovePastLayer()
         {
-            this.graphics = graphics;
+            this.RemoveLayer(ref this.pastDrawing);
         }
 
         private void DrawPoint(int x, int y, Color color, int size)
@@ -158,6 +144,28 @@ namespace GraphicDesigner
             //Bitmap bm = new Bitmap(1, 1);
             //bm.SetPixel(0, 0, Color.Red);
             //graphics.DrawImageUnscaled(bm, p.x, p.y);
+        }
+
+        private void RemoveLayer(ref Layer layer)
+        {
+            if (layer == null)
+            {
+                return;
+            }
+
+            for (int i = layer.ColorMatrix.StartX; i <= layer.ColorMatrix.EndX; i++)
+            {
+                for (int j = layer.ColorMatrix.StartY; j <= layer.ColorMatrix.EndY; j++)
+                {
+                    if (this.field.ColorMatrix.Get(i, j) != layer.ColorMatrix.Get(i, j))
+                    {
+                        var color = this.field.ColorMatrix.Get(i, j);
+                        this.DrawPoint(i, j, color, 1);
+                    }
+                }
+            }
+
+            layer = null;
         }
 
         private Layer GetNewCurrentLayer(IList<Point> points)
@@ -195,20 +203,8 @@ namespace GraphicDesigner
             return currLayer;
         }
 
-        public void ClearGraphics()
-        {
-            graphics.Clear(Color.White);
-
-            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
-            this.pastDrawing = null;
-            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
-        }
 
         private Graphics graphics;
-
-        public Layer field;
-        public Layer currentDrawing;
-        public Layer pastDrawing;
         public bool connectPoints;
     }
 }

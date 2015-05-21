@@ -9,13 +9,6 @@ namespace GraphicDesigner
 {
     public class ColorMatrix
     {
-        public int StartX { get; private set; }
-        public int StartY { get; private set; }
-        public int EndX { get; private set; }
-        public int EndY { get; private set; }
-        public int Width { get; private set; }
-        public int Heigth { get; private set; }
-
         private Color[,] matrix;
 
         public ColorMatrix(int startX, int startY, int endX, int endY)
@@ -37,6 +30,13 @@ namespace GraphicDesigner
                 }
             }
         }
+
+        public int StartX { get; private set; }
+        public int StartY { get; private set; }
+        public int EndX { get; private set; }
+        public int EndY { get; private set; }
+        public int Width { get; private set; }
+        public int Heigth { get; private set; }
 
         public Color Get(int x, int y)
         {

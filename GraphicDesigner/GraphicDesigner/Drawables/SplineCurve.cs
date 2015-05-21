@@ -147,6 +147,6 @@ namespace GraphicDesigner.Drawables
         private IList<Point> ControlPoints;
         private IList<double> nodes;
         private int curvePower;
-        private System.IO.StreamWriter file;
+        //private System.IO.StreamWriter file;
     }
 }
