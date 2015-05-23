@@ -101,6 +101,6 @@ namespace GraphicDesigner.Tools
         private ToolType type;
         private Point start, end;
         private Renderer renderer;
-        private static int rotationAngle = 45;
+        private static double rotationAngle = Math.PI/2;
     }
 }
