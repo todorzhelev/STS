@@ -79,12 +79,19 @@ namespace GraphicDesigner
 
                 IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
-                if (this.options.CurrentFigure.NeedsRemovePastLayer)
+                try
                 {
-                    renderer.RemovePastLayer();
-                }
+                    if (this.options.CurrentFigure.NeedsRemovePastLayer)
+                    {
+                        renderer.RemovePastLayer();
+                    }
 
-                renderer.Render(coords, this.options);
+                    renderer.Render(coords, this.options);
+                }
+                catch (Exception)
+                {
+
+                }
             }
             else if( this.options.CurrentTool.ToolType == ToolType.Select)
             {
