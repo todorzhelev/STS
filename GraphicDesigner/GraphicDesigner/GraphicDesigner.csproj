@@ -62,7 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Renderer\ColorMatrix.cs" />
     <Compile Include="Renderer\Layer.cs" />
     <Compile Include="Tools\Rotate.cs" />
     <Compile Include="Tools\Select.cs" />

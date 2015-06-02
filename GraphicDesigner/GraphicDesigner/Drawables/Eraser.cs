@@ -50,17 +50,7 @@ namespace GraphicDesigner.Drawables
             }
         }
 
-        public FigureType FigureType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public FigureType FigureType { get; set; }
 
         private IList<Point> points;
         private bool isMouseDown;

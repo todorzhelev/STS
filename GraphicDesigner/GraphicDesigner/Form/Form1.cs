@@ -20,29 +20,32 @@ namespace GraphicDesigner
         private const FigureType DefaultFigureType = FigureType.Pencil;
         private const ToolType DefaultToolType = ToolType.Unknown;
 
-        private  InputOptions prevOptions;
-        private bool IsEraserUsed;
-
         private Graphics graphics;
         private Renderer renderer;
         private InputOptions options;
 
+        // може ли да ги махнем??
+        private InputOptions prevOptions;
+        private bool IsEraserUsed;
         private IList<Point> selectedPoints;
-        private Point selectedPointsCenter;
+        private Point selectedPointsCenter; 
 
         public STS()
         {
             InitializeComponent();
+
             this.graphics = this.CreateGraphics();
-            this.MouseDown += this.mouseDown;
-            this.MouseUp += this.mouseUp;
-            this.MouseMove += this.mouseMove;
             this.renderer = new Renderer(ref graphics);
             this.options = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.Cursor = Cursors.Default;
+
+            this.MouseDown += this.mouseDown;
+            this.MouseUp += this.mouseUp;
+            this.MouseMove += this.mouseMove;
+
             this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.IsEraserUsed = false;
-            selectedPoints = new List<Point>();
+            this.selectedPoints = new List<Point>();
         }
 
         private void ApplyPreviousOptions()
@@ -59,6 +62,7 @@ namespace GraphicDesigner
             this.renderer.SaveCurrentDrawingToField();
         }
 
+        // Mouse events on field
         private void mouseDown(object sender, MouseEventArgs e)
         {
             if (this.options.CurrentTool.ToolType == ToolType.Unknown)
@@ -119,8 +123,7 @@ namespace GraphicDesigner
             this.options.CurrentFigure.mouseMove(new Point(e.X, e.Y));
         }
 
-
-
+        // File menu
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -162,6 +165,29 @@ namespace GraphicDesigner
 
         }
 
+        // BrushSize Menu
+        private ContextMenuStrip brushSizeMenu = new ContextMenuStrip();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            brushSizeMenu.Show(Control.MousePosition);
+        }
+
+        private void line1ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.options.BrushSize = Utilities.BrushSize.Small;
+        }
+
+        private void line2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.options.BrushSize = Utilities.BrushSize.Medium;
+        }
+
+        private void line3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.options.BrushSize = Utilities.BrushSize.Large;
+        }
+
+        // ColorBox
         private void ColorButton_Click(object sender, EventArgs e)
         {
             colorDialog1.ShowDialog();
@@ -169,11 +195,8 @@ namespace GraphicDesigner
            
         }
 
-        private void STS_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        // Drawables buttons
         private void Circle_Click(object sender, EventArgs e)
         {
             ApplyPreviousOptions();
@@ -197,12 +220,6 @@ namespace GraphicDesigner
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.Rectangle;
         }
-        
-        ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            contextMenuStrip1.Show(Control.MousePosition);
-        }
 
         private void bezier_Click(object sender, EventArgs e)
         {
@@ -214,26 +231,6 @@ namespace GraphicDesigner
         {
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.SplineCurve;
-        }
-
-        private void line1ToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.options.BrushSize = Utilities.BrushSize.Small;
-        }
-
-        private void line2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.options.BrushSize = Utilities.BrushSize.Medium;
-        }
-
-        private void line3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.options.BrushSize = Utilities.BrushSize.Large;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void eraser_Click(object sender, EventArgs e)
@@ -264,17 +261,18 @@ namespace GraphicDesigner
             ApplyPreviousOptions();
             this.options.FigureType = FigureType.Ellipse;
         }
+       
 
+        // Tools buttons
         private void select_Click(object sender, EventArgs e)
         {
             this.options.CurrentTool.ToolType = ToolType.Select;
         }
 
-
         private void Rotate_Click(object sender, EventArgs e)
         {
             this.options.CurrentTool.ToolType = ToolType.Rotate;
-           // this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
+            // this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
 
             //Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
             Tools.Rotate r = new Tools.Rotate(ref renderer);
@@ -284,6 +282,5 @@ namespace GraphicDesigner
             renderer.Render(coords, this.options);
             renderer.connectPoints = true;
         }
-       
     }
 }

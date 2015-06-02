@@ -39,13 +39,13 @@ namespace GraphicDesigner
             if (this.pastDrawing != null)
             {
                 //this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
-                this.field.ColorMatrix.SetMultiple(this.pastDrawing.ColorMatrix);
+                this.field.SetMultiple(this.pastDrawing);
                 pastCopy = this.pastDrawing.Clone();
             }
 
             // copy current to past
             this.pastDrawing = this.currentDrawing.Clone();
-            this.pastDrawing.Level = (int)LayerLevel.Last;
+            this.pastDrawing.Level = LayerLevel.Last;
 
 
             if (options.CurrentFigure.NeedsRemovePastLayer)
@@ -63,7 +63,7 @@ namespace GraphicDesigner
             {
                 this.currentDrawing = this.field.Clone();
             }
-            this.currentDrawing.Level = (int)LayerLevel.Current;
+            this.currentDrawing.Level = LayerLevel.Current;
 
             foreach (Point p in points)
             {
@@ -73,7 +73,7 @@ namespace GraphicDesigner
                 {
                     for (int j = p.Y; j < p.Y + size; j++)
                     {
-                        this.currentDrawing.ColorMatrix.Set(i, j, options.Color);
+                        this.currentDrawing.Set(i, j, options.Color);
 
                     }
                 }
@@ -95,7 +95,7 @@ namespace GraphicDesigner
                         {
                             for (int j = p.Y; j < p.Y + size; j++)
                             {
-                                this.currentDrawing.ColorMatrix.Set(k, j, options.Color);
+                                this.currentDrawing.Set(k, j, options.Color);
 
                             }
                         }
@@ -109,23 +109,23 @@ namespace GraphicDesigner
         {
             graphics.Clear(Color.White);
 
-            this.field = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Field);
+            this.field = new Layer(0, 0, FormWidth, FormHeight, LayerLevel.Field);
             this.pastDrawing = null;
-            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
+            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, LayerLevel.Current);
         }
 
         public void SaveCurrentDrawingToField()
         {
             if (this.pastDrawing != null)
             {
-                this.pastDrawing.ColorMatrix.SetMultiple(this.currentDrawing.ColorMatrix);
-                this.field.ColorMatrix.SetMultiple(this.pastDrawing.ColorMatrix);
+                this.pastDrawing.SetMultiple(this.currentDrawing);
+                this.field.SetMultiple(this.pastDrawing);
                 this.pastDrawing = null;
-                this.currentDrawing.ColorMatrix.SetMultiple(this.field.ColorMatrix);
+                this.currentDrawing.SetMultiple(this.field);
             }
             else
             {
-                this.field.ColorMatrix.SetMultiple(this.currentDrawing.ColorMatrix);
+                this.field.SetMultiple(this.currentDrawing);
             }
 
         }
@@ -153,13 +153,13 @@ namespace GraphicDesigner
                 return;
             }
 
-            for (int i = layer.ColorMatrix.StartX; i <= layer.ColorMatrix.EndX; i++)
+            for (int i = layer.StartX; i <= layer.EndX; i++)
             {
-                for (int j = layer.ColorMatrix.StartY; j <= layer.ColorMatrix.EndY; j++)
+                for (int j = layer.StartY; j <= layer.EndY; j++)
                 {
-                    if (this.field.ColorMatrix.Get(i, j) != layer.ColorMatrix.Get(i, j))
+                    if (this.field.Get(i, j) != layer.Get(i, j))
                     {
-                        var color = this.field.ColorMatrix.Get(i, j);
+                        var color = this.field.Get(i, j);
                         this.DrawPoint(i, j, color, 1);
                     }
                 }
@@ -198,7 +198,7 @@ namespace GraphicDesigner
                 }
             }
 
-            Layer currLayer = new Layer(minX, minY, maxX, maxY, (int)LayerLevel.Current);
+            Layer currLayer = new Layer(minX, minY, maxX, maxY, LayerLevel.Current);
             //Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
             return currLayer;
         }

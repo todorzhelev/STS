@@ -40,7 +40,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ColorButton = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.brushSizeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.line1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.line3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +58,7 @@
             this.Circle = new System.Windows.Forms.Button();
             this.Point = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.brushSizeMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -127,12 +127,12 @@
             // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            resources.ApplyResources(this.brushSizeMenu, "contextMenuStrip1");
+            this.brushSizeMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.line1ToolStripMenuItem,
             this.line2ToolStripMenuItem,
             this.line3ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.brushSizeMenu.Name = "contextMenuStrip1";
             // 
             // line1ToolStripMenuItem
             // 
@@ -223,7 +223,7 @@
             // 
             this.brush.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.brush, "brush");
-            this.brush.ContextMenuStrip = this.contextMenuStrip1;
+            this.brush.ContextMenuStrip = this.brushSizeMenu;
             this.brush.Name = "brush";
             this.brush.UseVisualStyleBackColor = false;
             this.brush.Click += new System.EventHandler(this.button1_Click);
@@ -292,10 +292,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "STS";
-            this.Load += new System.EventHandler(this.STS_Load);
+            //this.Load += new System.EventHandler(this.STS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.brushSizeMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
