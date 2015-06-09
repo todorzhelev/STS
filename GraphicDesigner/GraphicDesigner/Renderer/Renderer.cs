@@ -49,6 +49,11 @@ namespace GraphicDesigner
                 this.RemoveLayer(ref this.currentDrawing);
             }
 
+            // copy current to field (current is already past)
+            if (this.currentDrawing != null)
+            {
+                this.field.SetMultiple(this.currentDrawing);
+            }
 
             // create current
             if (pastCopy != null)
@@ -143,6 +148,7 @@ namespace GraphicDesigner
                 for (int j = jStart; j < jEnd; j++)
                 {
                     this.DrawPoint(i, j, image.GetPixel(i - iStart, j - jStart), 1);
+                    this.currentDrawing.Set(i, j, image.GetPixel(i - iStart, j - jStart));
                 }
             }
         }

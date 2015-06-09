@@ -52,10 +52,7 @@ namespace GraphicDesigner.Drawables
         {
             Line l = new Line();
             l.GeneratePoints(p1, p2);
-            for (int i = 0; i < l.GetPoints().Count; i++)
-            {
-                points.Add(l.GetPoints()[i]);
-            }
+            points.AddRange(l.GetPoints());
         }
         public void mouseUp(Point mouseCoords)
         {

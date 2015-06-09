@@ -88,6 +88,10 @@ namespace GraphicDesigner
                     {
                         renderer.RemovePastLayer();
                     }
+                    else
+                    {
+                        renderer.SaveCurrentDrawingToField();
+                    }
 
                     renderer.Render(coords, this.options);
 
