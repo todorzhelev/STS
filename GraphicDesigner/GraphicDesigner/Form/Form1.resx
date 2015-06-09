@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>152, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -190,13 +190,13 @@
     <value>15</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
+    <value>267, 17</value>
   </metadata>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>272, 17</value>
+    <value>407, 17</value>
   </metadata>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>408, 17</value>
+    <value>543, 17</value>
   </metadata>
   <data name="ColorButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 12pt</value>
@@ -228,10 +228,10 @@
   <data name="&gt;&gt;ColorButton.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>519, 21</value>
+  <metadata name="brushSizeMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <data name="contextMenuStrip1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="brushSizeMenu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Showcard Gothic, 9pt</value>
   </data>
   <data name="line1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -252,13 +252,13 @@
   <data name="line3ToolStripMenuItem.Text" xml:space="preserve">
     <value>line 3</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="brushSizeMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 70</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
+  <data name="&gt;&gt;brushSizeMenu.Name" xml:space="preserve">
+    <value>brushSizeMenu</value>
   </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+  <data name="&gt;&gt;brushSizeMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Rotate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">

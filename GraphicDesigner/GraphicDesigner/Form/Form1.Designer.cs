@@ -125,9 +125,9 @@
             this.ColorButton.UseVisualStyleBackColor = false;
             this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             // 
-            // contextMenuStrip1
+            // brushSizeMenu
             // 
-            resources.ApplyResources(this.brushSizeMenu, "contextMenuStrip1");
+            resources.ApplyResources(this.brushSizeMenu, "brushSizeMenu");
             this.brushSizeMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.line1ToolStripMenuItem,
             this.line2ToolStripMenuItem,
@@ -292,7 +292,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "STS";
-            //this.Load += new System.EventHandler(this.STS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.brushSizeMenu.ResumeLayout(false);

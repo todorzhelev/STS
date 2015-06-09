@@ -10,24 +10,21 @@ namespace GraphicDesigner
 {
     class Renderer
     {
-        private const int FormWidth = 900;
-        private const int FormHeight = 700;
-
         public Layer field;
         public Layer currentDrawing;
         public Layer pastDrawing;
+        private Graphics graphics;
 
         public Renderer(ref Graphics graphics)
         {
             this.graphics = graphics;
             this.ClearGraphics();
 
-            this.connectPoints = true;
+            //this.connectPoints = true;
         }
 
         public void Render(IList<Point> points, InputOptions options)
         {
-
             if (points.Count < 1)
             {
                 return;
@@ -38,7 +35,6 @@ namespace GraphicDesigner
             // copy past to field
             if (this.pastDrawing != null)
             {
-                //this.pastDrawing.colorMatrix.SetMultiple(this.currentDrawing.colorMatrix);
                 this.field.SetMultiple(this.pastDrawing);
                 pastCopy = this.pastDrawing.Clone();
             }
@@ -80,7 +76,7 @@ namespace GraphicDesigner
                 this.DrawPoint(p.X, p.Y, options.Color, size);
             }
 
-            if (this.connectPoints && options.CurrentFigure.NeedsConnectPoints)
+            if (options.CurrentFigure.NeedsConnectPoints && options.CurrentTool.ToolType == ToolType.Unknown)
             {
                 for (int i = 0; i < points.Count - 1; i++)
                 {
@@ -96,9 +92,9 @@ namespace GraphicDesigner
                             for (int j = p.Y; j < p.Y + size; j++)
                             {
                                 this.currentDrawing.Set(k, j, options.Color);
-
                             }
                         }
+
                         this.DrawPoint(p.X, p.Y, options.Color, size);
                     }
                 }
@@ -109,9 +105,9 @@ namespace GraphicDesigner
         {
             graphics.Clear(Color.White);
 
-            this.field = new Layer(0, 0, FormWidth, FormHeight, LayerLevel.Field);
+            this.field = new Layer(0, 0, Constants.FormWidth, Constants.FormHeight, LayerLevel.Field);
             this.pastDrawing = null;
-            this.currentDrawing = new Layer(0, 0, FormWidth, FormHeight, LayerLevel.Current);
+            this.currentDrawing = new Layer(0, 0, Constants.FormWidth, Constants.FormHeight, LayerLevel.Current);
         }
 
         public void SaveCurrentDrawingToField()
@@ -135,10 +131,30 @@ namespace GraphicDesigner
             this.RemoveLayer(ref this.pastDrawing);
         }
 
-        private void DrawPoint(int x, int y, Color color, int size)
+        public void DrawImage(Bitmap image)
         {
-            var brush = new SolidBrush(color);
-            graphics.FillRectangle(brush, x, y, size, size);
+            int iStart = Constants.DrawStart.X;
+            int iEnd = Math.Min(image.Width, Constants.DrawEnd.X);
+            int jStart = Constants.DrawStart.Y;
+            int jEnd = Math.Min(image.Height, Constants.DrawEnd.Y);
+
+            for (int i = iStart; i < iEnd; i++)
+            {
+                for (int j = jStart; j < jEnd; j++)
+                {
+                    this.DrawPoint(i, j, image.GetPixel(i - iStart, j - jStart), 1);
+                }
+            }
+        }
+
+        public void DrawPoint(int x, int y, Color color, int size)
+        {
+            if (x >= Constants.DrawStart.X && x <= Constants.DrawEnd.X
+                && y >= Constants.DrawStart.Y && y <= Constants.DrawEnd.Y)
+            {
+                var brush = new SolidBrush(color);
+                graphics.FillRectangle(brush, x, y, size, size);
+            }
 
             //another way to draw points, which is slower
             //Bitmap bm = new Bitmap(1, 1);
@@ -171,9 +187,9 @@ namespace GraphicDesigner
         private Layer GetNewCurrentLayer(IList<Point> points)
         {
             var maxX = 0;
-            var minX = FormWidth;
+            var minX = Constants.FormWidth;
             var maxY = 0;
-            var minY = FormHeight;
+            var minY = Constants.FormHeight;
 
             foreach (Point p in points)
             {
@@ -202,9 +218,5 @@ namespace GraphicDesigner
             //Layer currLayer = new Layer(0, 0, FormWidth, FormHeight, (int)LayerLevel.Current);
             return currLayer;
         }
-
-
-        private Graphics graphics;
-        public bool connectPoints;
     }
 }

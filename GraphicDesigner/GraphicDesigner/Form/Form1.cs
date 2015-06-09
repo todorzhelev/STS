@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
 using System.Diagnostics;
+using System.IO;
 
 
 namespace GraphicDesigner
@@ -83,23 +84,17 @@ namespace GraphicDesigner
 
                 IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
-                try
-                {
                     if (this.options.CurrentFigure.NeedsRemovePastLayer)
                     {
                         renderer.RemovePastLayer();
                     }
 
                     renderer.Render(coords, this.options);
-                }
-                catch (Exception)
-                {
 
-                }
             }
             else if( this.options.CurrentTool.ToolType == ToolType.Select)
             {
-                this.options.CurrentTool.mouseUp(new Point(e.X, e.Y),ref renderer);
+                this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
                 selectedPoints = this.options.CurrentTool.GetPoints();
                 selectedPointsCenter = this.options.CurrentTool.GetCenter();
                 //this.options.Color = Color.White;
@@ -142,11 +137,11 @@ namespace GraphicDesigner
 
             if (OD.ShowDialog() == DialogResult.OK)
             {
-                ///pictureBox1.Image = new Bitmap(OD.OpenFile());
+                Bitmap image = new Bitmap(OD.FileName);
+                renderer.DrawImage(image);
+                image.Dispose();
             }
-                OD.Dispose();
-
-                OD.ShowDialog();     
+            OD.Dispose();
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -278,9 +273,7 @@ namespace GraphicDesigner
             Tools.Rotate r = new Tools.Rotate(ref renderer);
 
             IList<Point> coords = r.GetPoints(ref selectedPoints, selectedPointsCenter.X, selectedPointsCenter.Y);
-            renderer.connectPoints = false;
             renderer.Render(coords, this.options);
-            renderer.connectPoints = true;
         }
     }
 }
