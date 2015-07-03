@@ -44,7 +44,7 @@ namespace GraphicDesigner
             this.pastDrawing.Level = LayerLevel.Last;
 
 
-            if (options.CurrentFigure.NeedsRemovePastLayer)
+            if (options.CurrentFigure.NeedsRemovePastLayer && options.CurrentTool.ToolType == ToolType.Unknown)
             {
                 this.RemoveLayer(ref this.currentDrawing);
             }
