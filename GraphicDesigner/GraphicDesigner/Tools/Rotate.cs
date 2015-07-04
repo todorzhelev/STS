@@ -41,10 +41,10 @@ namespace GraphicDesigner.Tools
             //rotates each point counter-clockwise
             for (int i = 0; i < points.Count; i++)
             {
-                int oldX = points[i].X - cX;
-                int oldY = points[i].Y - cY;
-                int newX = (int)(oldX * Math.Cos(rotationAngle) - oldY * Math.Sin(rotationAngle) + cX);
-                int newY = (int)(oldX * Math.Sin(rotationAngle) + oldY * Math.Cos(rotationAngle) + cY);
+                int translatedX = points[i].X - cX;
+                int translatedY = points[i].Y - cY;
+                int newX = (int)(translatedX * Math.Cos(rotationAngle) - translatedY * Math.Sin(rotationAngle) + cX);
+                int newY = (int)(translatedX * Math.Sin(rotationAngle) + translatedY * Math.Cos(rotationAngle) + cY);
                 points[i] = new Point(newX, newY);
             }
 
