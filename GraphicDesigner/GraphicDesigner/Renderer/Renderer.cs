@@ -19,8 +19,6 @@ namespace GraphicDesigner
         {
             this.graphics = graphics;
             this.ClearGraphics();
-
-            //this.connectPoints = true;
         }
 
         public void Render(IList<Point> points, InputOptions options)
