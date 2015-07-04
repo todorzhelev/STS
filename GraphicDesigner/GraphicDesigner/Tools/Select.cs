@@ -9,62 +9,38 @@ namespace GraphicDesigner.Tools
 {
     class Select : ITool
     {
-        public IList<Point> GetPoints()
-        {
-            var points = new List<Point>();
-            for (int i = start.X; i < end.X; i++)
-            {
-                for (int j = start.Y; j < end.Y; j++)
-                {
-                    points.Add(new Point(i, j));
-                }
+        private Point start;
+        private Point end;
 
-            }
-
-            return points;
-        }
-
+        public ToolType ToolType { get; set; }
+   
         public void mouseDown(Point mouseCoords)
         {
-            start = mouseCoords;
+            this.start = mouseCoords;
         }
 
-      
+
         public void mouseUp(Point mouseCoords, ref Renderer r)
         {
-            end = mouseCoords;
-
-           
+            this.end = mouseCoords;
         }
 
         public void mouseMove(Point mouseCoords)
         {
         }
 
-        public ToolType ToolType
+        public Layer GetLayer(ref Layer selectedLayer, ref Renderer r)
         {
-            get
+            var layer = new Layer(start.X, start.Y, end.X, end.Y, Utilities.LayerLevel.Current);
+            for (int i = start.X; i <= end.X; i++)
             {
-                return this.type;
+                for (int j = start.Y; j <= end.Y; j++)
+                {
+                    layer.Set(i, j, r.currentDrawing.Get(i, j));
+                }
             }
-            set
-            {
-                this.type = value;
-            }
+
+            return layer;
         }
-
-        void setSelectedPoints(ref List<Point> sPoints)
-        {
-
-        }
-
-        public Point GetCenter()
-        {
-            return new Point(start.X+Math.Abs(end.X - start.X) / 2, start.Y+Math.Abs(end.Y - start.Y) / 2);
-        }
-
-        private ToolType type;
-       // public ToolType type;
-        private Point start,end;
     }
 }

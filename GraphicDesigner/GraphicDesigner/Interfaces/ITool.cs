@@ -9,13 +9,10 @@ namespace GraphicDesigner
 {
     interface ITool
     {
-        IList<Point> GetPoints();
+        Layer GetLayer(ref Layer selectedLayer, ref Renderer r);
         void mouseDown(Point mouseCoords);
         void mouseUp(Point mouseCoords, ref Renderer r);
         void mouseMove(Point mouseCoords);
-
-        Point GetCenter();
-
         ToolType ToolType { get; set; }
     }
 }

@@ -28,8 +28,7 @@ namespace GraphicDesigner
         // може ли да ги махнем??
         private InputOptions prevOptions;
         private bool IsEraserUsed;
-        private IList<Point> selectedPoints;
-        private Point selectedPointsCenter; 
+        private Layer selectedLayer;
 
         public STS()
         {
@@ -46,7 +45,6 @@ namespace GraphicDesigner
 
             this.prevOptions = new InputOptions(DefaultColor, DefaultFigureType, DefaultBrushSize, DefaultToolType);
             this.IsEraserUsed = false;
-            this.selectedPoints = new List<Point>();
         }
 
         private void ApplyPreviousOptions()
@@ -99,22 +97,8 @@ namespace GraphicDesigner
             else if( this.options.CurrentTool.ToolType == ToolType.Select)
             {
                 this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
-                selectedPoints = this.options.CurrentTool.GetPoints();
-                selectedPointsCenter = this.options.CurrentTool.GetCenter();
-                //this.options.Color = Color.White;
-               // renderer.Render(coords, this.options);
-            }
-            //else if( this.options.CurrentTool.ToolType == ToolType.Rotate)
-            //{
-            //    this.options.CurrentTool.mouseUp(new Point(e.X, e.Y),ref renderer);
-
-            //    Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
-
-            //    IList<Point> coords = r.GetPoints(ref selectedPoints);
-
-            //    renderer.Render(coords, this.options);
-            //}
-           
+                this.selectedLayer = this.options.CurrentTool.GetLayer(ref this.selectedLayer, ref this.renderer);
+            }     
         }
 
         private void mouseMove(object sender, MouseEventArgs e)
@@ -265,19 +249,20 @@ namespace GraphicDesigner
         // Tools buttons
         private void select_Click(object sender, EventArgs e)
         {
+            this.renderer.SaveCurrentDrawingToField();
             this.options.CurrentTool.ToolType = ToolType.Select;
         }
 
         private void Rotate_Click(object sender, EventArgs e)
         {
+            this.renderer.SaveCurrentDrawingToField();
             this.options.CurrentTool.ToolType = ToolType.Rotate;
-            // this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
 
-            //Tools.Rotate r = (Tools.Rotate)(this.options.CurrentTool);
-            Tools.Rotate r = new Tools.Rotate(ref renderer);
+            Tools.Rotate r = new Tools.Rotate();
 
-            IList<Point> coords = r.GetPoints(ref selectedPoints, selectedPointsCenter.X, selectedPointsCenter.Y);
-            renderer.Render(coords, this.options);
+            var layer = r.GetLayer(ref this.selectedLayer, ref this.renderer);
+            renderer.RenderLayer(layer);
+            this.selectedLayer = layer;
         }
     }
 }

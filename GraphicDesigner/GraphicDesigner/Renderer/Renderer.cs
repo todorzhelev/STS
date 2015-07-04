@@ -106,6 +106,20 @@ namespace GraphicDesigner
             }
         }
 
+        public void RenderLayer(Layer layer)
+        {
+            this.SaveCurrentDrawingToField();
+            for (int i = layer.StartX; i < layer.EndX; i++)
+            {
+                for (int j = layer.StartY; j < layer.EndY; j++)
+                {
+                    var color = layer.Get(i, j);
+                    this.DrawPoint(i, j, color, 1);
+                    this.currentDrawing.Set(i, j, color);
+                }
+            }
+        }
+
         public void ClearGraphics()
         {
             graphics.Clear(Color.White);

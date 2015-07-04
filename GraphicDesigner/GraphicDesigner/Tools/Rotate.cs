@@ -9,90 +9,58 @@ namespace GraphicDesigner.Tools
 {
     class Rotate : ITool
     {
-        public Rotate()
-        {
-        }
-        public Rotate(ref Renderer renderer)
-        {
-            this.renderer = renderer;
-        }
-        void setSelectedPoints(ref List<Point> sPoints)
-        {
+        private static double rotationAngle = Math.PI / 2;
 
-        }
-        public IList<Point> GetPoints(ref IList<Point> selectedPoints,int cX, int cY)
-        {
-            var points = new List<Point>();
+        public ToolType ToolType { get; set; }
 
-            for (int i = 0; i < selectedPoints.Count; i++)
+        public Layer GetLayer(ref Layer selectedLayer, ref Renderer r)
+        {
+            var cx = selectedLayer.StartX + selectedLayer.Width / 2;
+            var cy = selectedLayer.StartY + selectedLayer.Heigth / 2;
+            var sxNew = cx - selectedLayer.Heigth / 2;
+            var syNew = cy - selectedLayer.Width / 2;
+            var exNew = cx + selectedLayer.Heigth / 2;
+            var eyNew = cy + selectedLayer.Width / 2;
+            if (sxNew < 0)
             {
-                if(this.renderer.currentDrawing.Get(selectedPoints[i].X,selectedPoints[i].Y) == Color.White)
+                sxNew = 0;
+            }
+            if (syNew < 0)
+            {
+                syNew = 0;
+            }
+
+            var rotatedLayer = new Layer(sxNew, syNew, exNew, eyNew, Utilities.LayerLevel.Current);
+            for (int i = selectedLayer.StartX; i <= selectedLayer.EndX; i++)
+            {
+                for (int j = selectedLayer.StartY; j <= selectedLayer.EndY; j++)
                 {
-                    continue;
+                    int oldX = i - cx;
+                    int oldY = j - cy;
+                    int newX = (int)(oldX * Math.Cos(rotationAngle) - oldY * Math.Sin(rotationAngle) + cx);
+                    int newY = (int)(oldX * Math.Sin(rotationAngle) + oldY * Math.Cos(rotationAngle) + cy);
+                    if (newX < 0 || newY < 0)
+                    {
+                        continue;
+                    }
+
+                    rotatedLayer.Set(newX, newY, selectedLayer.Get(i, j));
                 }
-
-                //save each non-white point
-                Point p = new Point();
-                p.X = selectedPoints[i].X;
-                p.Y = selectedPoints[i].Y;
-                points.Add(p);
             }
 
-            //rotates each point counter-clockwise
-            for (int i = 0; i < points.Count; i++)
-            {
-                int translatedX = points[i].X - cX;
-                int translatedY = points[i].Y - cY;
-                int newX = (int)(translatedX * Math.Cos(rotationAngle) - translatedY * Math.Sin(rotationAngle) + cX);
-                int newY = (int)(translatedX * Math.Sin(rotationAngle) + translatedY * Math.Cos(rotationAngle) + cY);
-                points[i] = new Point(newX, newY);
-            }
-
-            return points;
+            return rotatedLayer;
         }
-
-        public IList<Point> GetPoints()
-        {
-            var points = new List<Point>();
- 
-            return points;
-        }
-
-    
+  
         public void mouseDown(Point mouseCoords)
         {
-            start = mouseCoords;
-        }
-
-        public Point GetCenter()
-        {
-            return new Point(0, 0);
         }
 
         public void mouseUp(Point mouseCoords, ref Renderer r)
         {
-            end = mouseCoords;
         }
 
         public void mouseMove(Point mouseCoords)
         {
         }
-
-        public ToolType ToolType
-        {
-            get
-            {
-                return this.type;
-            }
-            set
-            {
-                this.type = value;
-            }
-        }
-
-        private ToolType type;
-        private Point start, end;
-        private Renderer renderer;
-        private static double rotationAngle = Math.PI/2;
     }
 }
