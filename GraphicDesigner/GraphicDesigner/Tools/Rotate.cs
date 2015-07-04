@@ -31,27 +31,21 @@ namespace GraphicDesigner.Tools
                     continue;
                 }
 
-                //translates each non-white point to the beginning of the coordinate system
+                //save each non-white point
                 Point p = new Point();
-                p.X = selectedPoints[i].X - cX;
-                p.Y = selectedPoints[i].Y - cY;
+                p.X = selectedPoints[i].X;
+                p.Y = selectedPoints[i].Y;
                 points.Add(p);
             }
 
             //rotates each point counter-clockwise
             for (int i = 0; i < points.Count; i++)
             {
-                int x = (int)(points[i].X * Math.Cos(rotationAngle) + points[i].Y * Math.Sin(rotationAngle));
-                int y = (int)(-points[i].X * Math.Sin(rotationAngle) + points[i].Y * Math.Cos(rotationAngle));
-                points[i] = new Point(x, y);
-            }
-
-            //returns back the points
-            for (int i = 0; i < points.Count; i++)
-            {
-                int x = points[i].X + cX;
-                int y = points[i].Y + cY;
-                points[i] = new Point(x,y);
+                int oldX = points[i].X - cX;
+                int oldY = points[i].Y - cY;
+                int newX = (int)(oldX * Math.Cos(rotationAngle) - oldY * Math.Sin(rotationAngle) + cX);
+                int newY = (int)(oldX * Math.Sin(rotationAngle) + oldY * Math.Cos(rotationAngle) + cY);
+                points[i] = new Point(newX, newY);
             }
 
             return points;
@@ -78,8 +72,6 @@ namespace GraphicDesigner.Tools
         public void mouseUp(Point mouseCoords, ref Renderer r)
         {
             end = mouseCoords;
-
-
         }
 
         public void mouseMove(Point mouseCoords)
