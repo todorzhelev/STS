@@ -76,11 +76,13 @@ namespace GraphicDesigner
 
         private void mouseUp(object sender, MouseEventArgs e)
         {
-            if (this.options.CurrentTool.ToolType == ToolType.Unknown )
+            try
             {
-                this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
+                if (this.options.CurrentTool.ToolType == ToolType.Unknown)
+                {
+                    this.options.CurrentFigure.mouseUp(new Point(e.X, e.Y));
 
-                IList<Point> coords = this.options.CurrentFigure.GetPoints();
+                    IList<Point> coords = this.options.CurrentFigure.GetPoints();
 
                     if (this.options.CurrentFigure.NeedsRemovePastLayer)
                     {
@@ -93,12 +95,16 @@ namespace GraphicDesigner
 
                     renderer.Render(coords, this.options);
 
+                }
+                else if (this.options.CurrentTool.ToolType == ToolType.Select)
+                {
+                    this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
+                    this.selectedLayer = this.options.CurrentTool.GetLayer(ref this.selectedLayer, ref this.renderer);
+                }  
             }
-            else if( this.options.CurrentTool.ToolType == ToolType.Select)
+            catch (Exception)
             {
-                this.options.CurrentTool.mouseUp(new Point(e.X, e.Y), ref renderer);
-                this.selectedLayer = this.options.CurrentTool.GetLayer(ref this.selectedLayer, ref this.renderer);
-            }     
+            }
         }
 
         private void mouseMove(object sender, MouseEventArgs e)
@@ -115,6 +121,7 @@ namespace GraphicDesigner
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.renderer.ClearGraphics();
+            this.selectedLayer = null;
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)

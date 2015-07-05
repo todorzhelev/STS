@@ -14,9 +14,16 @@ namespace GraphicDesigner
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new STS());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new STS());
+            }
+            catch (Exception)
+            {
+            }
+            
         }
     }
 }

@@ -112,6 +112,10 @@ namespace GraphicDesigner
                 for (int j = layer.StartY; j < layer.EndY; j++)
                 {
                     var color = layer.Get(i, j);
+                    if (color == Color.White)
+                    {
+                        continue;
+                    }
                     this.DrawPoint(i, j, color, 1);
                     this.currentDrawing.Set(i, j, color);
                 }
